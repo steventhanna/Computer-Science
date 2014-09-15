@@ -1,0 +1,9 @@
+import kareltherobot.*;
+import kareltherobot.Directions.Direction;
+
+public class Harvester extends Robot{
+	public Harvester(int street, int avenue, Direction direction, int numberOfBeepers) {
+		super(street, avenue, direction, numberOfBeepers); {
+		}
+	}
+}
