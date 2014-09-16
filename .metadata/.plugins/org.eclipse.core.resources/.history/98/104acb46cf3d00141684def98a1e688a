@@ -1,0 +1,17 @@
+import kareltherobot.*;
+
+public class BeeperHarvester extends Harvester {
+
+	public BeeperHarvester(int st, int ave, Direction direction,
+			int numOfBeepers) {
+		super(st, ave, direction, numOfBeepers);
+	}
+	
+	public void pickBeeper() {
+		super.pickBeeper();
+		super.pickBeeper();
+	}
+	
+	
+
+}

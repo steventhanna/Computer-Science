@@ -1,0 +1,12 @@
+import kareltherobot.*;
+
+public class BeeperHarvesterRunner implements Directions
+{
+
+	public static void main(String [] args) 
+	{	
+		BeeperHarvester rachel = new BeeperHarvester(2, 2, East, 0);
+		rachel.harvestField();
+		rachel.turnOff();
+	}
+}
