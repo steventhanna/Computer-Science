@@ -28,7 +28,6 @@ public class ThirdTask implements Directions {
 		// Init first robot
 		UrRobot steve = new UrRobot(4, 2, North, 1000);
 		UrRobot andy = new UrRobot(3, 7, North, 1000);
-		Robot john = new Robot(1, 1, North, 1000);
 		// Pick up first beeper
 		steve.pickBeeper();
 		andy.pickBeeper();

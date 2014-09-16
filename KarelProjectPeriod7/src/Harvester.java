@@ -6,11 +6,36 @@ public class Harvester extends Robot{
 		}
 	}
 	
+	// turns the robot right
 	public void turnRight() {
 		World.setDelay(0);
 		for(int i=3; i<0; i--) {
 			turnLeft();
 		}
 		World.setDelay(25);
+	}
+	
+	public boolean checkForBeeper() {
+		if(nextToABeeper()) {
+			pickBeeper();
+			moveUntilObstruction();
+			return true;
+		} else {
+			moveUntilObstruction();
+			return false;
+		}
+	}
+	
+	public boolean moveUntilObstruction() {
+		while(frontIsClear()) {
+			move();
+			checkForBeeper();
+			move();
+			return true;
+		}
+		turnOff();
+		turnRight();
+		return false;
+		
 	}
 }

@@ -25,6 +25,10 @@ public class FieldPicker extends Robot implements Directions{
 		World.setDelay(25);
 	}
 	
+	public void moveAmount(int amountToMove) {
+		for(;amountToMove; )
+	}
+	
 	public void turnAndMoveRight() {
 		move();
 		turnRight();
