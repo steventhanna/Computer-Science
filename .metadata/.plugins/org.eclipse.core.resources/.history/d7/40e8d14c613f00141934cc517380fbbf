@@ -1,0 +1,13 @@
+import kareltherobot.*;
+
+public class Question1 extends BetterMethods implements Directions {
+
+	public Question1(int street, int avenue, Direction direction, int beepers) {
+		super(street, avenue, direction, beepers);
+	}
+
+	public static void main(String[] args) {
+		
+	}
+
+}

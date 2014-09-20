@@ -1,0 +1,10 @@
+import kareltherobot.*;
+
+public class BetterMethods extends Robot implements Directions {
+
+	public BetterMethods(int street, int avenue, Direction direction,
+			int beepers) {
+		super(street, avenue, direction, beepers);
+	}
+	
+}

@@ -1,0 +1,28 @@
+import kareltherobot.*;
+
+public class PinSetter extends BetterMethods implements Directions {
+
+	public PinSetter(int street, int avenue, Direction direction, int beepers) {
+		super(street, avenue, direction, beepers);
+	}
+	
+	public void rightBorder() {
+		putBeeper();
+		for(int i=3; i>0; i--) {
+			move();
+			turnRight();
+			move();
+			putBeeper();
+			turnLeft();
+		}
+	}
+	
+	public void topBorder() {
+		turnLeft();
+		for(int i=3; i>0; i--) {
+			move();
+			move()
+			putBeeper();
+		}
+	}
+}
