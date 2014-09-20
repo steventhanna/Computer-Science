@@ -1,0 +1,13 @@
+import kareltherobot.*;
+
+public class CarpetPlace extends BetterMethods implements Directions {
+
+	public CarpetPlace(int street, int avenue, Direction direction, int beepers) {
+		super(street, avenue, direction, beepers);
+	}
+	
+	public void placeCarpet() {
+		// robot starting at 10,2,south
+	}
+
+}
