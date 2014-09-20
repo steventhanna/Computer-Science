@@ -1,0 +1,32 @@
+import kareltherobot.*;
+
+public class MessageScribe extends BetterMethods implements Directions {
+
+	public MessageScribe(int street, int avenue, Direction direction,
+			int beepers) {
+		super(street, avenue, direction, beepers);
+		
+	}
+	
+	int[] messageArray = {
+		0, 1, 0, 0, 1, 0, 1, 1, 1, 0, 1, 0, 0, 0, 1, 0, 0, 0, 1, 1, 1, 0,
+		0, 1, 0, 0, 1, 0, 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1, 0, 
+		0, 1, 1, 1, 1, 0, 1, 1, 1, 0, 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1, 0,
+		0, 1, 0 ,0 ,1, 0, 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1, 0,
+		0, 1, 0, 0 ,1, 0, 1, 1, 1, 0, 1, 1, 1, 0, 1, 1, 1, 0, 1, 1, 1, 0,
+	};
+	
+	
+	public void scribe() {
+		for(int i=0; i < messageArray.length; i++) {
+			int messageVariable = messageArray[i];
+			if(messageVariable == 0) {
+				move();
+			} else if(messageVariable == 1) {
+				putBeeper();
+				move();
+			}
+		}
+	}
+
+}
