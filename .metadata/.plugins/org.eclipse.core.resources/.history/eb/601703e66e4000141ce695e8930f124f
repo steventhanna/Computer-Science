@@ -16,7 +16,6 @@ public class Question2 extends BetterMethods implements Directions {
 		BetterMethods eddie = new BetterMethods(1,6,North,1);
 		
 		eddie.moveToOrigin();
-		eddie.clearWorldOfBeepers();
 	}
 
 }

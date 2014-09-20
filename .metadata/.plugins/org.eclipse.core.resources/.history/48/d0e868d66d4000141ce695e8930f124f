@@ -28,43 +28,12 @@ public class BetterMethods extends Robot implements Directions {
 			move();
 		}
 		turnRight();
-	}
-	
-	public void checkBeeperAndGo() {
-		if(nextToABeeper()) {
-			pickBeeper();
-			clearWorldOfBeepers();
-		} else {
-			clearWorldOfBeepers();
-		}
-	}
-	
-	public void onlyCheckBeeper() {
-		if(nextToABeeper()) {
-			pickBeeper();
-		}
+
 	}
 	
 	public void clearWorldOfBeepers() {
-		// Start Robot at 1,1, North
-		while(frontIsClear()) {
-			World.setDelay(10);
-			move();
-			checkBeeperAndGo();
-		}
-		if(facingNorth()) {
-			turnRight();
-			move();
-			onlyCheckBeeper();
-			turnRight();
-			clearWorldOfBeepers();
-		} else if(facingSouth()) {
-			turnLeft();
-			move();
-			onlyCheckBeeper();
-			turnLeft();
-			clearWorldOfBeepers();
-		}
+		// Start Robot at 1,1
+		
 	}
 	
 }
