@@ -17,7 +17,6 @@ public class Question1 extends PinSetter {
 		john.createBorder();
 		john.fillCenter();
 		john.setVisible(true);
-		john.teleportRobot(1, 1, 1, North);
 	}
 
 }

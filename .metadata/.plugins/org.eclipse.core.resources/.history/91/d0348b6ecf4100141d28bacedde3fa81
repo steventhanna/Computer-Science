@@ -67,7 +67,7 @@ public class BetterMethods extends Robot implements Directions {
 		}
 	}
 	
-	public void teleportRobot(int street, int avenue, int beeperAmount, Direction Direction) {
+	public void teleportRobot(String robotName, int street, int avenue, int beeperAmount, Direction Direction) {
 		setVisible(false);
 		new BetterMethods(street, avenue, Direction, beeperAmount);
 		setVisible(true);
