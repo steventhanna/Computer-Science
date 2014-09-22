@@ -1,9 +1,3 @@
-/*
- * Steven Hanna
- * This is a class containing several methods that improve upon the
- * older version of Robot.  This needs to be extended by other classes.
- * 
- */
 import kareltherobot.*;
 
 public class BetterMethods extends Robot implements Directions {

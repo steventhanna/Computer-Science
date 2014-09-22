@@ -1,6 +1,6 @@
 /* 
  * Steven Hanna
- * Purpose: to create the scribes that will write the message for chapter 3
+ * Purpose: to create the scribes that will write the message
  */
 
 import kareltherobot.*;

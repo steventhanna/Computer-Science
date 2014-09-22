@@ -1,6 +1,7 @@
 /* 
  * Steven Hanna
  * Purpose: to implement the answer to question 2
+ * 
  */
 
 import kareltherobot.*;
