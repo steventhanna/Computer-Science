@@ -78,7 +78,7 @@ public class BetterMethods extends Robot implements Directions {
 
 		setVisible(false);
 		turnOff();
-		new BetterMethods(street, avenue, Direction, beeperAmount);
+		this = new BetterMethods(street, avenue, Direction, beeperAmount);
 		
 	}
 	
