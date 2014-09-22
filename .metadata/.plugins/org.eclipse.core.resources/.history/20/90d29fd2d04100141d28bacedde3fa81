@@ -9,7 +9,7 @@ public class Question1 extends PinSetter {
 
 	public static void main(String[] args) {
 		World.setVisible(true);
-		World.setDelay(1);
+		World.setDelay(20);
 		
 		// Init robot at 1,5,North,10
 		

@@ -1,7 +1,7 @@
 import kareltherobot.*;
+import java.lang.*;
 
 public class BetterMethods extends Robot implements Directions {
-
 
 	public BetterMethods(int street, int avenue, Direction direction,
 			int beepers) {
@@ -72,7 +72,7 @@ public class BetterMethods extends Robot implements Directions {
 
 		setVisible(false);
 		turnOff();
-		this = new BetterMethods(street, avenue, Direction, beeperAmount);
+		new PinSetter(street, avenue, Direction, beeperAmount);
 		
 	}
 	

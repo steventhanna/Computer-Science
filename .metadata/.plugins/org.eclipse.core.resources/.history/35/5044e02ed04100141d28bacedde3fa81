@@ -2,7 +2,6 @@ import kareltherobot.*;
 
 public class BetterMethods extends Robot implements Directions {
 
-
 	public BetterMethods(int street, int avenue, Direction direction,
 			int beepers) {
 		super(street, avenue, direction, beepers);
@@ -68,11 +67,10 @@ public class BetterMethods extends Robot implements Directions {
 		}
 	}
 	
-	public void teleport(int street, int avenue, Direction Direction, int beeperAmount) {
-
+	public void teleport(int street, int avenue, Direction Direction, int beeperAmount, String extendName) {
 		setVisible(false);
 		turnOff();
-		this = new BetterMethods(street, avenue, Direction, beeperAmount);
+		new extendName(street, avenue, Direction, beeperAmount);
 		
 	}
 	
