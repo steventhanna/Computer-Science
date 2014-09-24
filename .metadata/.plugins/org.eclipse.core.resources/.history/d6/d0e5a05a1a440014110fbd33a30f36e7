@@ -1,0 +1,9 @@
+import kareltherobot.*;
+
+public class TwoRowLayer extends BeeperLayer {
+
+	public TwoRowLayer(int street, int avenue, Direction direction, int beepers) {
+		super(street, avenue, direction, beepers);
+	}
+
+}

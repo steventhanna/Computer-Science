@@ -1,4 +1,5 @@
 import kareltherobot.*;
+import kareltherobot.Directions.Direction;
 
 public class Harvester extends Robot 
 {
@@ -61,6 +62,20 @@ public class Harvester extends Robot
 		}
 	}
 	
+	public void teleport(int street, int avenue, Direction Direction, int beeperAmount) {
+
+		setVisible(false);
+		turnOff();
+		new Harvester(street, avenue, Direction, beeperAmount);
+		move();
+		
+	}
+	
+	public void putBeeperAmount(int j) {
+		for(int i = j; i == 0; i--) {
+			putBeeper();
+		}
+	}
 	
 
 }

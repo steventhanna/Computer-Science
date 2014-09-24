@@ -1,0 +1,14 @@
+import kareltherobot.*;
+
+public class BeeperTester extends Harvester {
+
+	public BeeperTester(int st, int ave, Direction direction, int numOfBeepers) {
+		super(st, ave, direction, numOfBeepers);
+	}
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+
+	}
+
+}

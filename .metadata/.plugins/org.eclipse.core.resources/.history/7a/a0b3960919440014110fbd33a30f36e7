@@ -1,0 +1,5 @@
+import kareltherobot.*;
+
+public abstract class BeeperLayer extends Robot {
+
+}

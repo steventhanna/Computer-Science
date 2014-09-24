@@ -1,0 +1,18 @@
+import kareltherobot.*;
+
+public class Runner implements Directions {
+
+	public static void main(String[] args) {
+		
+		World.setVisible(true);
+		World.readWorld("fieldExampleWorld.kwld");
+		World.setDelay(15);
+		
+		// Known as declaring the var.  not really, but whatever
+		Harvester johnny = new Harvester(2, 2, East, 0);
+		johnny.pickTwoRows();
+		johnny.turnOff();
+		
+	}
+
+}
