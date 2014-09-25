@@ -2,7 +2,7 @@
 
 import kareltherobot.*;
 
-public class BackwardWalker extends Robot implements Directions {
+public class BackwardWalker extends Robot implements Directions{
 
 	public BackwardWalker(int street, int avenue, Direction direction,
 			int beepers) {
