@@ -72,16 +72,10 @@ public class Harvester extends Robot
 	}
 	
 	public void putBeeperAmount(int amount) {
-		for(int i=amount; i>0; i--) {
+		for(int amount = j; i == 0; i--) {
 			putBeeper();
-			System.out.println("This is an active funtion");
 		}
 	}
 	
-	public void moveAmount(int amount) {
-		for(int i=amount; i>0; i--) {
-			move();
-		}
-	}
 
 }

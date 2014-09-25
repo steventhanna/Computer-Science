@@ -80,7 +80,7 @@ public class Harvester extends Robot
 	
 	public void moveAmount(int amount) {
 		for(int i=amount; i>0; i--) {
-			move();
+			move(0;)
 		}
 	}
 

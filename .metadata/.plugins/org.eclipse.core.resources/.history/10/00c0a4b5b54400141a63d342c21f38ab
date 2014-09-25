@@ -6,7 +6,7 @@ public class Runner implements Directions {
 		
 		World.setVisible(true);
 		World.readWorld("fieldExampleWorld.kwld");
-		World.setDelay(20);
+		World.setDelay(5);
 		
 		Harvester johnny = null;
 		Harvester bob = null;
