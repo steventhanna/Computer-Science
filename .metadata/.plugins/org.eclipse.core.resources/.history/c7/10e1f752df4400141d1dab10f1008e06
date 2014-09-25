@@ -1,4 +1,3 @@
- 
 import kareltherobot.*;
 
 public class TwoRowLayer extends BeeperLayer {

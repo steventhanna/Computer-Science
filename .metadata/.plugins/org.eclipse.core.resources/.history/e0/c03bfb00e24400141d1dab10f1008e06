@@ -1,0 +1,24 @@
+// Step backwards on move()
+
+import kareltherobot.*;
+
+public class BackwardWalker extends Robot {
+
+	public BackwardWalker(int street, int avenue, Direction direction,
+			int beepers) {
+		super(street, avenue, direction, beepers);
+	}
+	
+	public void turnAround() {
+		turnLeft();
+		turnLeft();
+	}
+	
+	public void move() {
+		turnAround();
+		move();
+		turnAround();
+	}
+	
+
+}

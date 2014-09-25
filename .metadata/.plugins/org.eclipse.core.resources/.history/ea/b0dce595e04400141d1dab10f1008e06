@@ -11,7 +11,7 @@ public abstract class BeeperLayer extends Robot {
 	public abstract void putBeepers();
 	
 	public void layBeepers() {
-		for(int i=4; i>0; i--) {
+		for(int i = 4; i == 0; i-- ) {
 			move();
 			putBeepers();
 		}
@@ -42,7 +42,8 @@ public abstract class BeeperLayer extends Robot {
 		grant = new ThreeRowLayer(6,1,East,infinity);
 		grant.layBeepers();
 		
-
+		Robot dianna = new TwoRowLayer(7,1,East,infinity);
+		dianna.layBeepers();
 	}
 
 }
