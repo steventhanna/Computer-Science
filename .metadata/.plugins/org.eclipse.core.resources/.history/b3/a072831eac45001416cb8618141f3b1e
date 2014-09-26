@@ -1,0 +1,14 @@
+import kareltherobot.*;
+
+public class Constructor extends Robot {
+
+	public Constructor(int street, int avenue, Direction direction, int beepers) {
+		super(street, avenue, direction, beepers);
+	}
+
+	public static void main(String[] args) {
+
+
+	}
+
+}

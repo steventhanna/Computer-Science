@@ -1,0 +1,10 @@
+import kareltherobot.*;
+
+public class Constructor extends Robot {
+
+	public static void main(String[] args) {
+
+
+	}
+
+}
