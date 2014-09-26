@@ -66,14 +66,6 @@ public class Choreographer extends Robot {
 		tri.pickBeeper();
 	}
 	
-	@Override
-	public void turnLeft() {
-		super.turnLeft();
-		dianna.turnLeft();
-		tri.turnLeft();
-	}
-	
-	
 	public static void main(String[] args) {
 		World.setVisible(true);
 		World.readWorld("fieldExampleWorld.kwld");

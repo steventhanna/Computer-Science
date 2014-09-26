@@ -52,36 +52,10 @@ public class Choreographer extends Robot {
 		
 	}
 	
-	@Override
-	public void move() {
-		super.move();
-		dianna.move();
-		tri.move();
-	}
-	
-	@Override
-	public void pickBeeper() {
-		super.pickBeeper();
-		dianna.pickBeeper();
-		tri.pickBeeper();
-	}
-	
-	@Override
-	public void turnLeft() {
-		super.turnLeft();
-		dianna.turnLeft();
-		tri.turnLeft();
-	}
-	
-	
 	public static void main(String[] args) {
 		World.setVisible(true);
 		World.readWorld("fieldExampleWorld.kwld");
 		World.setDelay(10);
-		
-		Choreographer tim = new Choreographer(2, 2, East, 0);
-		tim.pickTwoRows();
-		
 	}
 
 }

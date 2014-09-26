@@ -29,13 +29,6 @@ public class Choreographer extends Robot {
 		}
 	}
 	
-	public void turnAroundRight() {
-		for(int i = 2; i>0; i--) {
-			move();
-			turnRight();
-		}
-	}
-	
 	public void turnRight() {
 		World.setDelay(0);
 		for(int i = 3; i>0; i--) {
@@ -47,41 +40,13 @@ public class Choreographer extends Robot {
 	public void pickTwoRows() {
 		pickRow();
 		turnAroundLeft();
-		pickRow();
-		turnAroundRight();
 		
 	}
-	
-	@Override
-	public void move() {
-		super.move();
-		dianna.move();
-		tri.move();
-	}
-	
-	@Override
-	public void pickBeeper() {
-		super.pickBeeper();
-		dianna.pickBeeper();
-		tri.pickBeeper();
-	}
-	
-	@Override
-	public void turnLeft() {
-		super.turnLeft();
-		dianna.turnLeft();
-		tri.turnLeft();
-	}
-	
 	
 	public static void main(String[] args) {
 		World.setVisible(true);
 		World.readWorld("fieldExampleWorld.kwld");
 		World.setDelay(10);
-		
-		Choreographer tim = new Choreographer(2, 2, East, 0);
-		tim.pickTwoRows();
-		
 	}
 
 }

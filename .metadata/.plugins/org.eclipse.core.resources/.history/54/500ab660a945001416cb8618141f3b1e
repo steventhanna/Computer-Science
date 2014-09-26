@@ -1,0 +1,31 @@
+import kareltherobot.*;
+
+public class Choreographer extends Robot {
+
+	public Choreographer(int street, int avenue, Direction direction,
+			int beepers) {
+		super(street, avenue, direction, beepers);
+		
+	}
+	
+	// Declare fields - an initial value for a var
+	// Also known as an instance variable
+	// First Slave
+	private Robot dianna = new Robot(4, 2, East, 0);
+	// Second slave
+	private Robot tri = new Robot(6, 2, East, 0);
+	
+	public void pickRow() {
+		for(int i = 6; i>0; i--) {
+			move();
+			pickBeeper();
+		}
+	}
+	
+	public static void main(String[] args) {
+		World.setVisible(true);
+		World.readWorld("fieldExampleWorld.kwld");
+		World.setDelay(10);
+	}
+
+}
