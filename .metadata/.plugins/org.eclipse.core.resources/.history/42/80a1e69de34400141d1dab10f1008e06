@@ -1,15 +1,16 @@
 import kareltherobot.*;
 
-public class MileWalker extends Robot implements Directions {
+public class DropBeeperAndWalker extends Robot {
 
-	public MileWalker(int street, int avenue, Direction direction, int beepers) {
+	public DropBeeperAndWalker(int street, int avenue, Direction direction,
+			int beepers) {
 		super(street, avenue, direction, beepers);
+		
 	}
 	
 	public void move() {
-		for(int i=8; i>0; i--) {
-			super.move();
-		}
+		putBeeper();
+		super.move();
 	}
 
 	public static void main(String[] args) {
@@ -17,7 +18,7 @@ public class MileWalker extends Robot implements Directions {
 		World.setVisible(true);
 		World.setDelay(15);
 		
-		MileWalker andy = new MileWalker(1,1,North,1);
+		DropBeeperAndWalker andy = new DropBeeperAndWalker(1,1,North,1);
 		andy.move();
 	}
 

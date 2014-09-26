@@ -1,6 +1,6 @@
 import kareltherobot.*;
 
-public class DropBeeperAndWalker extends Robot {
+public class DropBeeperAndWalker extends Robot implements Directions{
 
 	public DropBeeperAndWalker(int street, int avenue, Direction direction,
 			int beepers) {

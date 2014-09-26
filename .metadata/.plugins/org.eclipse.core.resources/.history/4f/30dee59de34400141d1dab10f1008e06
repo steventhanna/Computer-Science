@@ -1,6 +1,6 @@
 import kareltherobot.*;
 
-public class MileWalker extends Robot implements Directions {
+public class MileWalker extends Robot {
 
 	public MileWalker(int street, int avenue, Direction direction, int beepers) {
 		super(street, avenue, direction, beepers);
