@@ -1,0 +1,27 @@
+/**
+ * Import things to know about interfaces:
+ * 
+ * You implement an interface
+ * You can implement as many interfaces as you'd like
+ * You can only extend one class
+ * 
+ * An interface is like an abstract class because
+ * it has undefined "abstract" methods
+ * In fact, all of its methods are undefined
+ * 
+ */
+
+import kareltherobot.*;
+
+public interface Worker 
+{
+	public void getToWork(); 
+	
+	public void turnRight() {
+		World.setDelay(0);
+		for(int i=3; i>0; i--) {
+			turnLeft();
+		}
+		World.setDelay(15);
+	}
+}

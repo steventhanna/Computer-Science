@@ -1,0 +1,49 @@
+/**
+ * Complete the following class with 
+ * the necessary methods.
+ * 
+ */
+import kareltherobot.*;
+
+public class Contractor extends UrRobot 
+{
+	// Create three helper robots
+	// (1) Mason (2) Roofer (3) Carpenter
+	// These are your fields AKA
+	// instance variables 
+	
+	
+	public Contractor(int street, int avenue, Direction direction, int numOfBeepers)
+	{
+		super(street, avenue, direction, numOfBeepers);
+	}
+	
+	// helper method
+	private void gatherTeam()
+	{
+		// messages for initial 
+		// positioning of the team
+	}
+	
+	public void buildHouse()
+	{
+		gatherTeam(); 
+		// Tell mason to getToWork(); 
+		mason.getToWork();
+		// Tell roofer to getToWork();
+		roofer.getToWork();
+		// Tell carpenter to getToWork();
+		carpenter.getToWork();
+	}
+	
+	// You should not change the main method
+	// This method must remain unchanged 
+	public static void main(String[] args)
+	{
+		Contractor kristin = new Contractor(1, 1, East, 0);
+		kristin.buildHouse(); 
+		kristin.turnOff(); 
+	}
+	
+	
+}
