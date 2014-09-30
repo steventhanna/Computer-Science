@@ -1,0 +1,17 @@
+import kareltherobot.*;
+
+public class NeighborTalker extends Robot implements BeeperPutter, Directions {
+
+	public NeighborTalker(int street, int avenue, Direction direction,
+			int beepers) {
+		super(street, avenue, direction, beepers);
+	}
+
+	@Override
+	public void distributeBeepers() {
+		
+	}
+	
+	
+
+}

@@ -1,0 +1,11 @@
+import kareltherobot.*;
+
+public class NoNeighbor implements BeeperPutter {
+
+	@Override
+	public void distributeBeepers() {
+		// TODO Auto-generated method stub
+		
+	}
+
+}
