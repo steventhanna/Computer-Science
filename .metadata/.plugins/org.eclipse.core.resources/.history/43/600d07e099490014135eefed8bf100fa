@@ -1,0 +1,32 @@
+import kareltherobot.*;
+
+public class ThreeLayer extends BeeperLayer  {
+
+	public ThreeLayer(int street, int avenue, Direction direction, int beepers) {
+		super(street, avenue, direction, beepers);
+		// TODO Auto-generated constructor stub
+	}
+	
+	public void layBeeper() {
+		for(int i=6; i>0; i--) {
+			putBeeper();
+			putBeeper();
+			putBeeper();
+			move();
+		}
+	}
+	
+	public void threeRows() {
+		layBeeper();
+		turnRight();
+		move();
+		turnRight();
+		layBeeper();
+		turnLeft();
+		move();
+		turnLeft();
+		layBeeper();
+		move();
+	}
+	
+}
