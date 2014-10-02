@@ -6,5 +6,16 @@ public class OneLayer extends BeeperLayer {
 		super(street, avenue, direction, beepers);
 	}
 	
+	public void layerOne() {
+		for(int i = 6; i>0; i--) {
+			dropBeeper();
+		}
+	}
+
+	@Override
+	public void dropBeeper() {
+		putBeeper();
+		
+	}
 	
 }

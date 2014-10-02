@@ -6,24 +6,5 @@ public class ThreeLayer extends BeeperLayer  {
 		super(street, avenue, direction, beepers);
 		// TODO Auto-generated constructor stub
 	}
-	
-	public void dropBeeper() {
-		for(int i=3; i>0; i--) {
-			putBeeper();
-		}
-	}
-	
-	public void threeRows() {
-		layBeeper();
-		turnRight();
-		move();
-		turnRight();
-		layBeeper();
-		turnLeft();
-		move();
-		turnLeft();
-		layBeeper();
-		move();
-	}
-	
+		
 }
