@@ -14,12 +14,12 @@ public class ManipulatorRunner implements Directions
 		Knight john = new Knight(3, 3, North, 0); 
 		
 		// Are these move methods different?
-		// profX.move(zombie);
-		// profX.move(jackson);
-		// profX.move(john); 
-		// profX.move(); 
-		// profX.move(); 
-		// profX.move();
+		profX.move(zombie);
+		profX.move(jackson);
+		profX.move(john); 
+		profX.move(); 
+		profX.move(); 
+		profX.move();
 		
 		// things I can't try to do
 		// jackson.turnAround(); 
@@ -32,7 +32,7 @@ public class ManipulatorRunner implements Directions
 		// zombie.move();
 		
 		// tell more than one robot to move
-		profX.move(jackson,john); 
-		profX.move(profX, jackson); 
+		// profX.move(jackson,john); 
+		// profX.move(profX, jackson); 
 	}
 }

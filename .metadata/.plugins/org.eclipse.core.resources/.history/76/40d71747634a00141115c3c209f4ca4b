@@ -14,7 +14,7 @@ public class BackWalker extends UrRobot
 		turnAround(); 
 	}
 	
-	void turnAround()
+	private void turnAround()
 	{
 		World.setDelay(0);
 		turnLeft(); 

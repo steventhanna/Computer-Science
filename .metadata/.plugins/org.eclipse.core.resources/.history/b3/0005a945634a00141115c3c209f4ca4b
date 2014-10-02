@@ -32,7 +32,7 @@ public class ManipulatorRunner implements Directions
 		// zombie.move();
 		
 		// tell more than one robot to move
-		profX.move(jackson,john); 
-		profX.move(profX, jackson); 
+		// profX.move(jackson,john); 
+		// profX.move(profX, jackson); 
 	}
 }
