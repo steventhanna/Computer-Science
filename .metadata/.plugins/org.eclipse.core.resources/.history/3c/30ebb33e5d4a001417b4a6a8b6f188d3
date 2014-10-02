@@ -37,10 +37,4 @@ public abstract class BeeperLayer extends Robot {
 		World.setDelay(15);
 	}
 
-	public void getToWork() {
-		// Probably should put something here... maybe layBeeper();
-		layBeeper();
-		
-	}
-
 }
