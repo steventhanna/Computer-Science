@@ -14,7 +14,7 @@ public abstract class BeeperLayer extends Robot {
 		for(int i=3; i>0; i--) {
 			turnLeft();
 		}
-		World.setDelay(10);
+		World.setDelay(15);
 	}
 
 }

@@ -17,11 +17,10 @@ public class TwoLayer extends BeeperLayer {
 	
 	// Start at 2,7,south
 	public void go() {
-		for(int i=5; i>0; i--) {
+		for(int i=6; i>0; i--) {
 			dropBeeper();
 			move();
 		}
-		dropBeeper();
 		turnLeft();
 		move();
 		turnLeft();

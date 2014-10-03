@@ -21,7 +21,6 @@ public class TwoLayer extends BeeperLayer {
 			dropBeeper();
 			move();
 		}
-		dropBeeper();
 		turnLeft();
 		move();
 		turnLeft();

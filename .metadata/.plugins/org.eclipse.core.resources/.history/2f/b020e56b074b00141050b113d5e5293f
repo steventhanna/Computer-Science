@@ -13,13 +13,5 @@ public class OneLayer extends BeeperLayer {
 		
 	}
 	
-	public void go() {
-		for(int i=6; i>0; i--) {
-			dropBeeper();
-			move();
-		}
-	}
-	
 	
 }
-	

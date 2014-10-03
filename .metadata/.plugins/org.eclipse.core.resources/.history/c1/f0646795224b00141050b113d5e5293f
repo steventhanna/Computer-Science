@@ -9,12 +9,5 @@ public abstract class BeeperLayer extends Robot {
 	
 	public abstract void dropBeeper();
 	
-	public void turnRight() {
-		World.setDelay(0);
-		for(int i=3; i>0; i--) {
-			turnLeft();
-		}
-		World.setDelay(10);
-	}
 
 }

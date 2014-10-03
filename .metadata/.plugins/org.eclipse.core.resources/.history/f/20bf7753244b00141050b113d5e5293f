@@ -21,7 +21,7 @@ public class ThreeLayer extends BeeperLayer  {
 		}
 	}
 	
-	public void disposeBeeper(int j) {
+	public void putBeeper(int j) {
 		for(int i=j; i>0; i--) {
 			super.putBeeper();
 		}
@@ -34,7 +34,7 @@ public class ThreeLayer extends BeeperLayer  {
 		turnRight();
 		move();
 		dropAndGo(5);
-		disposeBeeper(3);
+		putBeeper();
 		turnLeft();
 		move();
 		turnLeft();

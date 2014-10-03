@@ -26,11 +26,10 @@ public class Tester extends Robot implements Directions{
 	public static void main(String[] args) {
 		World.setVisible(true);
 		World.setSize(10,10);
-		World.setDelay(10);
+		World.setDelay(15);
 		Tester josh = new Tester(1,1,North,0);
-		josh.setVisible(false);
 		josh.getToWork();
-		
+		josh.turnOff();
 	}
 	
 }
