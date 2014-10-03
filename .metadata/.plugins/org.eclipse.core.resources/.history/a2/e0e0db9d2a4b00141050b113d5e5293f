@@ -1,0 +1,18 @@
+import kareltherobot.*;
+
+public class OneLayer extends BeeperLayer {
+
+	public OneLayer(int street, int avenue, Direction direction, int beepers) {
+		super(street, avenue, direction, beepers);
+		// TODO Auto-generated constructor stub
+	}
+
+	@Override
+	public void dropBeeper() {
+		// TODO Auto-generated method stub
+		
+		putBeeper();
+		
+	}
+
+}
