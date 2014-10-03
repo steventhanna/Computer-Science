@@ -7,7 +7,7 @@ public class OneLayer extends BeeperLayer {
 	}
 
 	@Override
-	public void dropBeeper() {
+	public void putBeeper() {
 		// TODO Auto-generated method stub
 		super.putBeeper();
 		

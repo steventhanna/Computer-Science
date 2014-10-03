@@ -7,6 +7,6 @@ public abstract class BeeperLayer extends Robot {
 		
 	}
 	
-	public abstract void dropBeeper();
+	public abstract void putBeeper();
 
 }

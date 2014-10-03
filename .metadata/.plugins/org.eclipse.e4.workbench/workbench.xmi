@@ -9,6 +9,7 @@
     <persistedState key="workingSets" value="&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?>&#xA;&lt;workingSets/>"/>
     <persistedState key="aggregateWorkingSetId" value="Aggregate for window 1410540173751"/>
     <tags>topLevel</tags>
+    <tags>shellMaximized</tags>
     <children xsi:type="basic:PartSashContainer" xmi:id="_E1TuIj4BEeSQYqnH7OvqXg" selectedElement="_E1TuIz4BEeSQYqnH7OvqXg" horizontal="true">
       <children xsi:type="advanced:PerspectiveStack" xmi:id="_E1TuIz4BEeSQYqnH7OvqXg" elementId="org.eclipse.ui.ide.perspectivestack" containerData="7500" selectedElement="_E1TuJD4BEeSQYqnH7OvqXg">
         <children xsi:type="advanced:Perspective" xmi:id="_E1TuJD4BEeSQYqnH7OvqXg" elementId="org.eclipse.jdt.ui.JavaPerspective" selectedElement="_E1TuJT4BEeSQYqnH7OvqXg" label="Java" iconURI="platform:/plugin/org.eclipse.jdt.ui/icons/full/eview16/jperspective.gif">
@@ -171,13 +172,13 @@
           <tags>removeOnHide</tags>
         </children>
         <children xsi:type="basic:Part" xmi:id="_cmvpkEpjEeS_AaLG4H9J1g" elementId="org.eclipse.e4.ui.compatibility.editor" contributionURI="bundleclass://org.eclipse.ui.workbench/org.eclipse.ui.internal.e4.compatibility.CompatibilityEditor" label="BeeperLayer.java" iconURI="platform:/plugin/org.eclipse.jdt.ui/icons/full/obj16/jcu_obj.gif" closeable="true">
-          <persistedState key="memento" value="&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?>&#xA;&lt;editor id=&quot;org.eclipse.jdt.ui.CompilationUnitEditor&quot; name=&quot;BeeperLayer.java&quot; partName=&quot;BeeperLayer.java&quot; title=&quot;BeeperLayer.java&quot; tooltip=&quot;SHanna_KarelChapter4Programs/src/BeeperLayer.java&quot;>&#xA;&lt;input factoryID=&quot;org.eclipse.ui.part.FileEditorInputFactory&quot; path=&quot;/SHanna_KarelChapter4Programs/src/BeeperLayer.java&quot;/>&#xA;&lt;editorState selectionHorizontalPixel=&quot;0&quot; selectionLength=&quot;0&quot; selectionOffset=&quot;208&quot; selectionTopPixel=&quot;0&quot;/>&#xA;&lt;/editor>"/>
+          <persistedState key="memento" value="&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?>&#xA;&lt;editor id=&quot;org.eclipse.jdt.ui.CompilationUnitEditor&quot; name=&quot;BeeperLayer.java&quot; partName=&quot;BeeperLayer.java&quot; title=&quot;BeeperLayer.java&quot; tooltip=&quot;SHanna_KarelChapter4Programs/src/BeeperLayer.java&quot;>&#xA;&lt;input factoryID=&quot;org.eclipse.ui.part.FileEditorInputFactory&quot; path=&quot;/SHanna_KarelChapter4Programs/src/BeeperLayer.java&quot;/>&#xA;&lt;editorState selectionHorizontalPixel=&quot;0&quot; selectionLength=&quot;0&quot; selectionOffset=&quot;21&quot; selectionTopPixel=&quot;0&quot;/>&#xA;&lt;/editor>"/>
           <tags>Editor</tags>
           <tags>org.eclipse.jdt.ui.CompilationUnitEditor</tags>
           <tags>removeOnHide</tags>
         </children>
         <children xsi:type="basic:Part" xmi:id="_e-6a0EpjEeS_AaLG4H9J1g" elementId="org.eclipse.e4.ui.compatibility.editor" contributionURI="bundleclass://org.eclipse.ui.workbench/org.eclipse.ui.internal.e4.compatibility.CompatibilityEditor" label="OneLayer.java" iconURI="platform:/plugin/org.eclipse.jdt.ui/icons/full/obj16/jcu_obj.gif" closeable="true">
-          <persistedState key="memento" value="&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?>&#xA;&lt;editor id=&quot;org.eclipse.jdt.ui.CompilationUnitEditor&quot; name=&quot;OneLayer.java&quot; partName=&quot;OneLayer.java&quot; title=&quot;OneLayer.java&quot; tooltip=&quot;SHanna_KarelChapter4Programs/src/OneLayer.java&quot;>&#xA;&lt;input factoryID=&quot;org.eclipse.ui.part.FileEditorInputFactory&quot; path=&quot;/SHanna_KarelChapter4Programs/src/OneLayer.java&quot;/>&#xA;&lt;editorState selectionHorizontalPixel=&quot;0&quot; selectionLength=&quot;0&quot; selectionOffset=&quot;196&quot; selectionTopPixel=&quot;0&quot;/>&#xA;&lt;/editor>"/>
+          <persistedState key="memento" value="&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?>&#xA;&lt;editor id=&quot;org.eclipse.jdt.ui.CompilationUnitEditor&quot; name=&quot;OneLayer.java&quot; partName=&quot;OneLayer.java&quot; title=&quot;OneLayer.java&quot; tooltip=&quot;SHanna_KarelChapter4Programs/src/OneLayer.java&quot;>&#xA;&lt;input factoryID=&quot;org.eclipse.ui.part.FileEditorInputFactory&quot; path=&quot;/SHanna_KarelChapter4Programs/src/OneLayer.java&quot;/>&#xA;&lt;editorState selectionHorizontalPixel=&quot;0&quot; selectionLength=&quot;0&quot; selectionOffset=&quot;304&quot; selectionTopPixel=&quot;0&quot;/>&#xA;&lt;/editor>"/>
           <tags>Editor</tags>
           <tags>org.eclipse.jdt.ui.CompilationUnitEditor</tags>
           <tags>removeOnHide</tags>
@@ -189,13 +190,13 @@
           <tags>removeOnHide</tags>
         </children>
         <children xsi:type="basic:Part" xmi:id="_j96rcEpjEeS_AaLG4H9J1g" elementId="org.eclipse.e4.ui.compatibility.editor" contributionURI="bundleclass://org.eclipse.ui.workbench/org.eclipse.ui.internal.e4.compatibility.CompatibilityEditor" label="ThreeLayer.java" iconURI="platform:/plugin/org.eclipse.jdt.ui/icons/full/obj16/jcu_obj.gif" closeable="true">
-          <persistedState key="memento" value="&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?>&#xA;&lt;editor id=&quot;org.eclipse.jdt.ui.CompilationUnitEditor&quot; name=&quot;ThreeLayer.java&quot; partName=&quot;ThreeLayer.java&quot; title=&quot;ThreeLayer.java&quot; tooltip=&quot;SHanna_KarelChapter4Programs/src/ThreeLayer.java&quot;>&#xA;&lt;input factoryID=&quot;org.eclipse.ui.part.FileEditorInputFactory&quot; path=&quot;/SHanna_KarelChapter4Programs/src/ThreeLayer.java&quot;/>&#xA;&lt;editorState selectionHorizontalPixel=&quot;0&quot; selectionLength=&quot;0&quot; selectionOffset=&quot;243&quot; selectionTopPixel=&quot;0&quot;/>&#xA;&lt;/editor>"/>
+          <persistedState key="memento" value="&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?>&#xA;&lt;editor id=&quot;org.eclipse.jdt.ui.CompilationUnitEditor&quot; name=&quot;ThreeLayer.java&quot; partName=&quot;ThreeLayer.java&quot; title=&quot;ThreeLayer.java&quot; tooltip=&quot;SHanna_KarelChapter4Programs/src/ThreeLayer.java&quot;>&#xA;&lt;input factoryID=&quot;org.eclipse.ui.part.FileEditorInputFactory&quot; path=&quot;/SHanna_KarelChapter4Programs/src/ThreeLayer.java&quot;/>&#xA;&lt;editorState selectionHorizontalPixel=&quot;0&quot; selectionLength=&quot;0&quot; selectionOffset=&quot;332&quot; selectionTopPixel=&quot;0&quot;/>&#xA;&lt;/editor>"/>
           <tags>Editor</tags>
           <tags>org.eclipse.jdt.ui.CompilationUnitEditor</tags>
           <tags>removeOnHide</tags>
         </children>
         <children xsi:type="basic:Part" xmi:id="_lAwogEpjEeS_AaLG4H9J1g" elementId="org.eclipse.e4.ui.compatibility.editor" contributionURI="bundleclass://org.eclipse.ui.workbench/org.eclipse.ui.internal.e4.compatibility.CompatibilityEditor" label="TwoLayer.java" iconURI="platform:/plugin/org.eclipse.jdt.ui/icons/full/obj16/jcu_obj.gif" closeable="true">
-          <persistedState key="memento" value="&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?>&#xA;&lt;editor id=&quot;org.eclipse.jdt.ui.CompilationUnitEditor&quot; name=&quot;TwoLayer.java&quot; partName=&quot;TwoLayer.java&quot; title=&quot;TwoLayer.java&quot; tooltip=&quot;SHanna_KarelChapter4Programs/src/TwoLayer.java&quot;>&#xA;&lt;input factoryID=&quot;org.eclipse.ui.part.FileEditorInputFactory&quot; path=&quot;/SHanna_KarelChapter4Programs/src/TwoLayer.java&quot;/>&#xA;&lt;editorState selectionHorizontalPixel=&quot;0&quot; selectionLength=&quot;0&quot; selectionOffset=&quot;237&quot; selectionTopPixel=&quot;0&quot;/>&#xA;&lt;/editor>"/>
+          <persistedState key="memento" value="&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?>&#xA;&lt;editor id=&quot;org.eclipse.jdt.ui.CompilationUnitEditor&quot; name=&quot;TwoLayer.java&quot; partName=&quot;TwoLayer.java&quot; title=&quot;TwoLayer.java&quot; tooltip=&quot;SHanna_KarelChapter4Programs/src/TwoLayer.java&quot;>&#xA;&lt;input factoryID=&quot;org.eclipse.ui.part.FileEditorInputFactory&quot; path=&quot;/SHanna_KarelChapter4Programs/src/TwoLayer.java&quot;/>&#xA;&lt;editorState selectionHorizontalPixel=&quot;0&quot; selectionLength=&quot;0&quot; selectionOffset=&quot;334&quot; selectionTopPixel=&quot;0&quot;/>&#xA;&lt;/editor>"/>
           <tags>Editor</tags>
           <tags>org.eclipse.jdt.ui.CompilationUnitEditor</tags>
           <tags>removeOnHide</tags>
@@ -345,7 +346,7 @@
       </children>
       <children xsi:type="menu:ToolBar" xmi:id="_E1VjdT4BEeSQYqnH7OvqXg" elementId="org.eclipse.ui.workbench.file">
         <tags>Draggable</tags>
-        <children xsi:type="menu:HandledToolItem" xmi:id="_OBSOUEpeEeS_AaLG4H9J1g" elementId="print" iconURI="platform:/plugin/org.eclipse.ui/icons/full/etool16/print_edit.png" tooltip="Print" enabled="false" command="_E1Ym9j4BEeSQYqnH7OvqXg"/>
+        <children xsi:type="menu:HandledToolItem" xmi:id="_XDpYsUr4EeSLLIwU-KvKmg" elementId="print" iconURI="platform:/plugin/org.eclipse.ui/icons/full/etool16/print_edit.png" tooltip="Print" enabled="false" command="_E1Ym9j4BEeSQYqnH7OvqXg"/>
       </children>
       <children xsi:type="menu:ToolBar" xmi:id="_E1Vjgz4BEeSQYqnH7OvqXg" elementId="additions" toBeRendered="false">
         <tags>toolbarSeparator</tags>
@@ -369,7 +370,7 @@
       </children>
       <children xsi:type="menu:ToolBar" xmi:id="_E1Vjsz4BEeSQYqnH7OvqXg" elementId="org.eclipse.ui.workbench.navigate">
         <tags>Draggable</tags>
-        <children xsi:type="menu:HandledToolItem" xmi:id="_OBXG0UpeEeS_AaLG4H9J1g" elementId="org.eclipse.ui.window.pinEditor" visible="false" iconURI="platform:/plugin/org.eclipse.ui/icons/full/etool16/pin_editor.png" tooltip="Pin Editor" type="Check" command="_E1YADT4BEeSQYqnH7OvqXg"/>
+        <children xsi:type="menu:HandledToolItem" xmi:id="_XDu4QUr4EeSLLIwU-KvKmg" elementId="org.eclipse.ui.window.pinEditor" visible="false" iconURI="platform:/plugin/org.eclipse.ui/icons/full/etool16/pin_editor.png" tooltip="Pin Editor" type="Check" command="_E1YADT4BEeSQYqnH7OvqXg"/>
       </children>
       <children xsi:type="menu:ToolBar" xmi:id="_E1Vjvj4BEeSQYqnH7OvqXg" elementId="group.editor" toBeRendered="false">
         <tags>toolbarSeparator</tags>
@@ -697,7 +698,7 @@
     </bindings>
     <bindings xmi:id="_yai_gD9fEeSvdLRX1IZoBw" keySequence="ALT+SHIFT+H" command="_yZt5Kz9fEeSvdLRX1IZoBw"/>
     <bindings xmi:id="_yajmkD9fEeSvdLRX1IZoBw" keySequence="ALT+COMMAND+SHIFT+ARROW_DOWN" command="_yZt5KT9fEeSvdLRX1IZoBw"/>
-    <bindings xmi:id="_NscmwUpeEeS_AaLG4H9J1g" keySequence="COMMAND+CTRL+F" command="_E1Yn0z4BEeSQYqnH7OvqXg"/>
+    <bindings xmi:id="_WrCrcUr4EeSLLIwU-KvKmg" keySequence="COMMAND+CTRL+F" command="_E1Yn0z4BEeSQYqnH7OvqXg"/>
   </bindingTables>
   <bindingTables xmi:id="_E1VkYz4BEeSQYqnH7OvqXg" elementId="org.eclipse.ui.textEditorScope" bindingContext="_E1Wxlz4BEeSQYqnH7OvqXg">
     <bindings xmi:id="_E1VkZD4BEeSQYqnH7OvqXg" keySequence="COMMAND+SHIFT+NUMPAD_MULTIPLY" command="_E1YAGT4BEeSQYqnH7OvqXg"/>
@@ -939,7 +940,7 @@
     <bindings xmi:id="_E1WKwT4BEeSQYqnH7OvqXg" keySequence="CTRL+D" command="_E1YA8j4BEeSQYqnH7OvqXg"/>
   </bindingTables>
   <bindingTables xmi:id="_E1WKwj4BEeSQYqnH7OvqXg" contributorURI="platform:/fragment/org.eclipse.e4.ui.workbench.renderers.swt.cocoa" bindingContext="_E1WxrD4BEeSQYqnH7OvqXg">
-    <bindings xmi:id="_NsdN0EpeEeS_AaLG4H9J1g" keySequence="M1+W" command="_E1Yn1T4BEeSQYqnH7OvqXg"/>
+    <bindings xmi:id="_WrCrckr4EeSLLIwU-KvKmg" keySequence="M1+W" command="_E1Yn1T4BEeSQYqnH7OvqXg"/>
   </bindingTables>
   <bindingTables xmi:id="_E1WKxD4BEeSQYqnH7OvqXg" bindingContext="_E1WxsD4BEeSQYqnH7OvqXg"/>
   <bindingTables xmi:id="_E1WKxT4BEeSQYqnH7OvqXg" bindingContext="_E1WxsT4BEeSQYqnH7OvqXg"/>
