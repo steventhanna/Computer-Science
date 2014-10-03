@@ -1,0 +1,34 @@
+import kareltherobot.*;
+
+public class Tester2 extends Robot implements Directions{
+	
+	public Tester2(int street, int avenue, Direction direction, int beepers) {
+		super(street, avenue, direction, beepers);
+		// TODO Auto-generated constructor stub
+	}
+
+	private ThreeLayer john = new ThreeLayer(1,1,North,infinity);
+	private OneLayer chaney = new OneLayer(1,4,North,infinity);
+	private OneLayer cobo = new OneLayer(1,5,North,infinity); 
+	
+
+
+	public void getToWork() {
+		john.go();
+		chaney.go();
+		cobo.go();
+		goose.go();
+		jose.go();
+	}
+	
+	public static void main(String[] args) {
+		World.setVisible(true);
+		World.setSize(10,10);
+		World.setDelay(10);
+		Tester josh = new Tester(1,1,North,0);
+		josh.setVisible(false);
+		josh.getToWork();
+		
+	}
+	
+}
