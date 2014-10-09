@@ -1,5 +1,0 @@
-import kareltherobot.*;
-
-public class NoNeighbor implements BeeperPutter {
-
-}
