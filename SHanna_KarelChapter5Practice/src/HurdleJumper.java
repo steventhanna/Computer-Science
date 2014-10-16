@@ -1,11 +1,15 @@
 import kareltherobot.*;
 
 public class HurdleJumper extends Robot {
-
-	public HurdleJumper(int street, int avenue, Direction direction, int beepers) {
+	private int myDelay;
+	
+	public HurdleJumper(int street, int avenue, Direction direction, int beepers, int myDelay) {
 		super(street, avenue, direction, beepers);
+		int delay = myDelay;
 		
 	}
+	
+	
 
 	public void turnRight() {
 		World.setDelay(0);
@@ -32,11 +36,11 @@ public class HurdleJumper extends Robot {
 	}
 	
 	public static void main(String[] args) {
-		World.setDelay(20);
+		World.setDelay(0);
 		World.setVisible(true);
 		World.readWorld("jumpingWorld.kwld");
 		
-		HurdleJumper john = new HurdleJumper(1,1,East,infinity);
+		HurdleJumper john = new HurdleJumper(1,1,East,infinity, 10);
 		john.go();
 
 	}
