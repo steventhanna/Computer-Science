@@ -1,6 +1,7 @@
 *.pydevproject
 .metadata
 .gradle
+./markers
 bin/
 tmp/
 *.tmp
