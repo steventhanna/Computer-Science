@@ -72,7 +72,7 @@ public class RePlanter extends Robot {
 		launch();
 		turnAndMoveLeft();
 		launch();
-		pickBeeper();
+		pickBeeper();	
 	}
 	
 	public static void main(String[] args) {
