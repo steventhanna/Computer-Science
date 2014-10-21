@@ -13,11 +13,11 @@ public class RePlanter extends Robot {
 		if(nextToABeeper()) {
 			pickBeeper();
 			if(nextToABeeper()) {
-				World.setDelay(10);
+				World.setDelay(20);
 				move();
 			} else {
 				putBeeper();
-				World.setDelay(10);
+				World.setDelay(20);
 				move();
 			}
 		}

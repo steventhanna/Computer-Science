@@ -83,7 +83,7 @@ public class HomeworkMethods extends Robot {
 		}
 	}
 	
-	public void mystery2Instruction() {
+	public void mysteryInstruction() {
 		if(facingWest()) {
 			move();
 			turnRight();
@@ -96,20 +96,6 @@ public class HomeworkMethods extends Robot {
 			turnLeft();
 			move();
 		}
-	}
-	
-	public void mysteryInstruction() {
-		move();
-		if(facingWest()) {
-			turnRight();
-			if(facingNorth()) {
-				move();
-			}
-		} else {
-			turnLeft();
-		}
-		move();
-
 	}
 
 	
