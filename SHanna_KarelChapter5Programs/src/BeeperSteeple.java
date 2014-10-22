@@ -70,7 +70,7 @@ public class BeeperSteeple extends Robot {
 		}
 	}
 	
-	public void pickAllBeepers() {
+	public void faceNorthAndGo() {
 		faceNorth();
 		while(facingNorth()) {
 			pickAmount(9);
@@ -78,8 +78,12 @@ public class BeeperSteeple extends Robot {
 			faceEast();
 			move();
 			simplePick();
-			faceSouth();
+			faceSouthAndGo();
 		}
+	}
+	
+	public void faceSouthAndGo() {
+		faceSouth();
 		while(facingSouth()) {
 			pickAmount(9);
 			simplePick();
@@ -88,9 +92,10 @@ public class BeeperSteeple extends Robot {
 			simplePick();
 			faceNorth();
 		}
-		
-		
-		
+	}
+	
+	public void pickAllBeepers() {
+		faceNorthAndGo();
 	}
 
 }
