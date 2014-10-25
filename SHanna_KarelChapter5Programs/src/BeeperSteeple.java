@@ -70,32 +70,35 @@ public class BeeperSteeple extends Robot {
 		}
 	}
 	
-	public void faceNorthAndGo() {
-		faceNorth();
-		while(facingNorth()) {
-			pickAmount(9);
-			simplePick();
-			faceEast();
-			move();
-			simplePick();
-			faceSouthAndGo();
-		}
+	public void go() {
+		faceEast();
+		
 	}
 	
-	public void faceSouthAndGo() {
-		faceSouth();
-		while(facingSouth()) {
-			pickAmount(9);
-			simplePick();
-			faceEast();
-			move();
-			simplePick();
-			faceNorth();
+	public void pickBeeper() {
+		if(nextToABeeper()) {
+			super.pickBeeper();
 		}
 	}
 	
 	public void pickAllBeepers() {
-		faceNorthAndGo();
+		faceEast();
+		while(!nextToABeeper()) {
+			move();
+		}
+		if(nextToABeeper()) {
+			faceNorth();
+			while(nextToABeeper()) {
+				move();
+			}
+			faceSouth();
+			while(frontIsClear()) {
+				move();
+				pickBeeper();
+			}
+			faceEast();
+		}
+		pickAllBeepers();
 	}
 
 }
