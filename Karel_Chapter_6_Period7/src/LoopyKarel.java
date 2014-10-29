@@ -24,17 +24,40 @@ public class LoopyKarel extends Robot {
 		}
 	}
 	
+	public void walkSquareOfLength(int amountPerSide, int amountOfBeepers) {
+		for(int i=4; i>0; i--) {
+			for(int x = amountPerSide; x>0; x--) {
+				for(int j=amountOfBeepers; j>0; j--) {
+					putBeeper();
+				}
+				super.move();
+			}
+			turnLeft();
+		}
+	}
+	
+	// overloaded method
+	public void move(int numOfMoves) {
+		for(int i=0; i< numOfMoves; i++) {
+			move();
+		}
+	}
+	
+	public void move(int numOfMoves, int numOfBeepers) {
+		for(int i = 0; i < numOfMoves; i++) {
+			for(int j = 0; j < numOfBeepers; j++) {
+				putBeeper();
+			}
+			move();
+		}
+	}
+	
 	public static void main(String[] args) {
 		World.setVisible(true);
-		World.setDelay(10);
+		World.setDelay(1);
 		
 		LoopyKarel eddie = new LoopyKarel(2,7,North,infinity);
-		eddie.walkSquareOfLength(6);
-		eddie.walkSquareOfLength(5);
-		eddie.walkSquareOfLength(4);
-		eddie.walkSquareOfLength(3);
-		eddie.walkSquareOfLength(2);
-		eddie.walkSquareOfLength(1);
+		eddie.walkSquareOfLength(3, 10);
 
 	}
 
