@@ -52,6 +52,28 @@ public class LoopyKarel extends Robot {
 		}
 	}
 	
+	public void faceNorth() {
+		while(!facingNorth()) {
+			turnLeft();
+		}
+	}
+	
+	public void faceSouth() {
+		while(!facingSouth()) {
+			turnLeft();
+		}
+	}
+	
+	public void clearAllBeepersToWall() {
+		faceSouth();
+		while(frontIsClear()) {
+			move();
+			while(nextToABeeper()) {
+				pickBeeper();
+			}
+		}
+	}
+	
 	public static void main(String[] args) {
 		World.setVisible(true);
 		World.setDelay(1);
