@@ -73,6 +73,10 @@ public class DigDug extends Robot {
 			move();
 		}
 		faceNorth();
+		while(nextToABeeper()) {
+			pickBeeper();
+			System.out.println("PickBeeper");
+		}
 		while(frontIsClear() && (checkEastWall() || checkWestWall())) {
 			while(nextToABeeper()) {
 				pickBeeper();
