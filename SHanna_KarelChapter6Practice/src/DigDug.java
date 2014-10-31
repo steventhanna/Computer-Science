@@ -35,10 +35,9 @@ public class DigDug extends Robot {
 		faceSouth();
 		if(!frontIsClear()) {
 			faceEast();
-			return false;
-		} else {
-			faceEast();
 			return true;
+		} else {
+			return false;
 		}	
 	}
 	
@@ -46,15 +45,53 @@ public class DigDug extends Robot {
 		faceEast();
 		if(!frontIsClear()) {
 			faceNorth();
-			return false;
+			return true;
 		} else {
 			faceNorth();
-			return true;
+			return false;
 		}
 	}
 	
+	public boolean checkWestWall() {
+		faceWest();
+		if(!frontIsClear()) {
+			faceNorth();
+			return true;
+		} else {
+			faceNorth();
+			return false;
+		}
+	}
+	
+	public void go() {
+		while(checkSouthWall()) {
+			faceEast();
+			move();
+		}
+		faceSouth();
+		while(frontIsClear()) {
+			move();
+		}
+		faceNorth();
+		while(frontIsClear() && (checkEastWall() || checkWestWall())) {
+			while(nextToABeeper()) {
+				pickBeeper();
+				System.out.println("PickBeeper");
+			}
+			move();
+		}
+		faceEast();
+		move();
+		go();
+	}
+	
 	public static void main(String[] args) {
-		// TODO Auto-generated method stub
+		World.setVisible(true);
+		World.readWorld("dig1.kwld");
+		World.setDelay(5);
+		
+		DigDug john = new DigDug(8,1,East,0);
+		john.go();
 
 	}
 
