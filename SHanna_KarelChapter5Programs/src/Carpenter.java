@@ -1,3 +1,7 @@
+/*
+ * Steven Hanna
+ * The main java file for the carpenter objective
+ */
 import kareltherobot.*;
 
 public class Carpenter extends Robot {
@@ -6,6 +10,7 @@ public class Carpenter extends Robot {
 		super(street, avenue, direction, beepers);
 	}
 	
+	// Orientation
 	public boolean faceNorth() {
 		while(!facingNorth()) {
 			turnLeft();
@@ -53,7 +58,7 @@ public class Carpenter extends Robot {
 			return false;
 		}
 	}
-	
+	// Check for rooms above first level
 	public boolean checkForRooms() {
 		faceNorth();
 		if(frontIsClear()) {
@@ -91,6 +96,7 @@ public class Carpenter extends Robot {
 		
 	}
 	
+	// Integration of checkForRooms()
 	public void carpet() {
 		// facing east
 		faceEast();

@@ -1,3 +1,8 @@
+/* 
+ * Steven Hanna
+ * Runner for steeple chaser
+ */
+
 import kareltherobot.*;
 
 public class SteepleChaser extends Hurdler {

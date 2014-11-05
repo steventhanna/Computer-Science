@@ -1,3 +1,8 @@
+/*
+ * Steven Hanna
+ * Runner for steeple
+ */
+
 import kareltherobot.*;
 
 public class SteepleRunner extends BeeperSteeple {

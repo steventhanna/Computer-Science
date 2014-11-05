@@ -1,3 +1,7 @@
+/*
+ * Steven Hanna
+ * The main class file for the ComplexCarpenter objective
+ */
 import kareltherobot.*;
 
 public class ComplexCarpenter extends Robot {
@@ -8,6 +12,7 @@ public class ComplexCarpenter extends Robot {
 		// TODO Auto-generated constructor stub
 	}
 	
+	// Orientation
 	public boolean faceNorth() {
 		while(!facingNorth()) {
 			turnLeft();
@@ -56,6 +61,7 @@ public class ComplexCarpenter extends Robot {
 		}
 	}
 	
+	// Check for walls
 	public boolean wallToWest() {
 		faceWest();
 		if(frontIsClear()) {
@@ -74,6 +80,7 @@ public class ComplexCarpenter extends Robot {
 		}
 	}
 	
+	// Return to ground
 	public void returnToGround() {
 		faceSouth();
 		while(frontIsClear()) {
@@ -82,6 +89,7 @@ public class ComplexCarpenter extends Robot {
 		
 	}
 	
+	// Main implementation of methods
 	public boolean wallsOnSides() {
 		faceNorth();
 		move();
@@ -108,6 +116,7 @@ public class ComplexCarpenter extends Robot {
 		
 	}
 	
+	// Lay the beepers
 	public void layBeeper() {
 		while(wallToEast() && wallToWest()) {
 			faceSouth();
@@ -116,6 +125,8 @@ public class ComplexCarpenter extends Robot {
 			}
 	}
 	
+	// Final implementation
+	// Call this on final 
 	public void go() {
 		wallsOnSides();
 		if(facingSouth() && !frontIsClear()) {

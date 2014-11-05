@@ -1,3 +1,7 @@
+/*
+ * Steven Hanna
+ * Main class to run carpenter
+ */
 import kareltherobot.*;
 
 public class CarpenterRunner extends Carpenter {

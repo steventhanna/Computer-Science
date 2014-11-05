@@ -1,3 +1,8 @@
+/*
+ * Steven Hanna
+ * The methods for the hurdler objective
+ */
+
 import kareltherobot.*;
 
 public class Hurdler extends Robot {
@@ -7,12 +12,14 @@ public class Hurdler extends Robot {
 		
 	}
 	
+	// Turn right
 	public void turnRight() {
 		turnLeft();
 		turnLeft();
 		turnLeft();
 	}
 	
+	// Turn right and check for wall
 	public boolean turnRightAndCheck() {
 		// run facingNorth();
 		turnRight();
@@ -28,12 +35,14 @@ public class Hurdler extends Robot {
 		}
 	}
 	
+	// Orientation
 	public void faceSouth() {
 		while(!facingSouth()) {
 			turnLeft();
 		}
 	}
 	
+	// Return to bottom
 	public void returnToBottom() {
 		if(facingSouth()) {
 			while(frontIsClear()) {
@@ -45,7 +54,7 @@ public class Hurdler extends Robot {
 		}
 	}
 	
-	
+	// Check for wall at north
 	public void checkForWall() {
 		while(facingNorth()) {
 			turnRightAndCheck();
