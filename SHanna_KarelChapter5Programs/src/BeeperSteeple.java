@@ -1,3 +1,8 @@
+/*
+ * Steven Hanna
+ * Main class for the beeper steeple objective
+ */
+
 import kareltherobot.*;
 
 public class BeeperSteeple extends Robot {
@@ -16,12 +21,14 @@ public class BeeperSteeple extends Robot {
 		}
 	}
 	
+	// An enhanced picker
 	public void simplePick() {
 		if(nextToABeeper()) {
 			pickBeeper();
 		}
 	}
 	
+	// The below are for orientation
 	public boolean faceNorth() {
 		while(!facingNorth()) {
 			turnLeft();
@@ -70,17 +77,19 @@ public class BeeperSteeple extends Robot {
 		}
 	}
 	
+	// Depreciated 
 	public void go() {
 		faceEast();
-		
 	}
 	
+	// A better pickBeeper()
 	public void pickBeeper() {
 		if(nextToABeeper()) {
 			super.pickBeeper();
 		}
 	}
 	
+	// The pickAllBeeper method.  
 	public void pickAllBeepers() {
 		faceEast();
 		while(!nextToABeeper()) {

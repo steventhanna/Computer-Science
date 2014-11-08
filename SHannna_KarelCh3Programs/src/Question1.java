@@ -1,3 +1,9 @@
+/*
+ * Steven Hanna
+ * Chapter 3 Question 1
+ * Purpose: to lay a series of pins
+ */
+
 import kareltherobot.*;
 import java.lang.String;
 
@@ -14,14 +20,10 @@ public class Question1 extends PinSetter {
 		// Init robot at 1,5,North,10
 		
 		PinSetter john = new PinSetter(1,5,North,10);
-		BetterMethods joe = new BetterMethods(1,3,North,10);
 		john.move();
 		john.createBorder();
 		john.fillCenter();
 		john.setVisible(true);
-		// john.teleport(1, 1, North, 1, "PinSetter");
-		joe.teleport(5, 5, West, 1);
-		joe.putBeeper();
 		
 		
 	}

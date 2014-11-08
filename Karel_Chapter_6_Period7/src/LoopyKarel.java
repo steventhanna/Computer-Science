@@ -65,7 +65,6 @@ public class LoopyKarel extends Robot {
 	}
 	
 	public void clearAllBeepersToWall() {
-		faceSouth();
 		while(frontIsClear()) {
 			move();
 			while(nextToABeeper()) {
@@ -74,12 +73,37 @@ public class LoopyKarel extends Robot {
 		}
 	}
 	
+	public void findBeeper() {
+		clearAllBeepersToWall();
+		if(facingSouth()) {
+			turnLeft();
+			move();
+			if(nextToABeeper()) {
+				pickBeeper();
+			}
+			turnLeft();
+		} else if(facingNorth()) {
+			turnRight();
+			move();
+			if(nextToABeeper()) {
+				pickBeeper();
+			}
+			turnRight();
+		}
+		findBeeper();
+	}
+	
+	
 	public static void main(String[] args) {
 		World.setVisible(true);
-		World.setDelay(1);
+		World.setDelay(10);
+		World.readWorld("example3B.kwld");
+		LoopyKarel eddie = new LoopyKarel(6,2,North,infinity);	
+//		eddie.clearAllBeepersToWall();
+//		eddie.turnLeft();
+//		eddie.move();
+		eddie.findBeeper();
 		
-		LoopyKarel eddie = new LoopyKarel(2,7,North,infinity);
-		eddie.walkSquareOfLength(3, 10);
 
 	}
 

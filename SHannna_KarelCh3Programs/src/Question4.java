@@ -1,3 +1,8 @@
+/*
+ * Steven Hanna
+ * Chapter 3 Question 4
+ * Purpose: lay a carpet around a floor
+ */
 import kareltherobot.*;
 
 public class Question4 extends CarpetPlace implements Directions {
