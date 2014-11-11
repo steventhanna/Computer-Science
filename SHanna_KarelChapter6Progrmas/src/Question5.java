@@ -1,3 +1,8 @@
+/*
+ * Steven Hanna
+ * Chapter 6, Question 5
+ * Purpose: clear all beepers in a room
+ */
 import kareltherobot.*;
 
 public class Question5 extends Robot {
