@@ -1,3 +1,8 @@
+/*
+ * Steven Hanna
+ * Chapter 6, Question 4
+ * Purpose: write a perimeter of beepers around a fence like structure
+ */
 import kareltherobot.*;
 
 public class Question4 extends Robot {
