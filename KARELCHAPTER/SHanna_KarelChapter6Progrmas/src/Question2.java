@@ -3,6 +3,7 @@
  * Chapter 6, Question 2
  * Purpose: to put a certain amount of beepers in a 6x6 square
  */
+
 import kareltherobot.*;
 
 public class Question2 extends Robot {

@@ -1,3 +1,10 @@
+/*
+ * Steven Hanna
+ * Chapter 6, Question 1
+ * Purpose: have a robot walk around a field of beepers, as if it was on 'patrol'
+ */
+
+
 import kareltherobot.*;
 
 public class Question1 extends Robot {
