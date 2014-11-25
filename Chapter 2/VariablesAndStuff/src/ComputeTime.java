@@ -6,36 +6,36 @@ public class ComputeTime {
 	public static void main(String[] args) {
 		Scanner scanner = new Scanner(System.in);
 		System.out.print("Seconds: ");
-		double seconds = scanner.nextDouble();
+		int seconds = scanner.nextInt();
 		scanner.close();
 		
 		// Ask a user for a time in seconds and change it to minutes
-		double minutes = seconds / 60;
-		double numberOfSeconds = seconds % 60;
+		int minutes = seconds / 60;
+		int numberOfSeconds = seconds % 60;
 		
 		
 		
 		// Number of hours
 		
-		double hours = minutes / 60;
-		double numberOfMinutes = minutes % 60;
+		int hours = minutes / 60;
+		int numberOfMinutes = minutes % 60;
 		if(numberOfMinutes < 0) {
 			numberOfMinutes = 0;
 		}
-		double days = hours / 24;
-		double numberOfHours = hours % 24;
+		int days = hours / 24;
+		int numberOfHours = hours % 24;
 		if(numberOfHours < 0) {
 			numberOfHours = 0;
 		}
 		
-		double weeks = days / 7;
-		double numberOfDays = days % 7;
+		int weeks = days / 7;
+		int numberOfDays = days % 7;
 		if(numberOfDays < 0) {
 			numberOfDays = 0;
 		}
 		
-		double years = weeks / 52;
-		double numberOfWeeks = weeks % 52;
+		int years = weeks / 52;
+		int numberOfWeeks = weeks % 52;
 		if(numberOfWeeks < 0) {
 			numberOfWeeks = 0;
 		}
