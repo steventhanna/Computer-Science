@@ -3,7 +3,7 @@ import java.util.*;
 public class FtoC {
 
 	public static double convert(double f) {
-		double result = (5/9) * (f - 32);
+		double result = ((f - 32) * (5.0/9));
 		return result;
 	}
 	
@@ -15,7 +15,6 @@ public class FtoC {
 		double answer = convert(input);
 		System.out.println("The degree in Centigrade is: " + answer);
 
-		System.out.println(System.currentTimeMillis());
 	}
 
 }
