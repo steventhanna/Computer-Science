@@ -33,6 +33,8 @@ public class HelpfulMethods {
 		return result;
 	}
 	
+	
+	
 	public static void print(String message) {
 		System.out.println(message);
 	}
