@@ -31,7 +31,7 @@ public class Question2 extends HelpfulMethods{
 		
 		 // computer average
 		 double average = (testScores[0] + testScores[1] + testScores[2] + testScores[3] + testScores[4]) / 5;
-		 average = Math.round((average * 10) / 10);
+		 // average = Math.round((average * 10) / 10);
 		 print("The average test score is " + average);
 		
 	}

@@ -25,16 +25,21 @@ public class Question3 extends HelpfulMethods {
 	public static void calculate() {
 		if(inputAndCheck()) {
 			System.out.println(number.length());
-			int[] calculateArray = new int[number.length()];
+			String[] calculateArray = new String[number.length()];
 			for(int i = 0; i>number.length(); i++) {
 				calculateArray[i] = number.substring(i);
 			}
+			int numberLength = number.length();
+			int[] numberHolder = new int[3];
+			for(int i=0; i>3; i++) {
+				numberHolder[i] = Integer.parseInt(calculateArray[i]);
+			}
+			System.out.println(numberHolder[2]);
+			
 		}
 	}
 	
-	public static void add(int number) {
-		
-	}
+
 	
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
