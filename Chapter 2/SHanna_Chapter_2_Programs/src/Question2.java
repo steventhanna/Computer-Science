@@ -16,7 +16,7 @@ public class Question2 extends HelpfulMethods{
 		// Input test scores
 		double[] testScores = new double[5];
 		Scanner scanner = new Scanner(System.in);
-		for(int i=0; i<5; i++) {
+		for(int i=0; i<4; i++) {
      		int count = i + 1;
 			System.out.println("Enter the " + count + " test score");
 			double score = scanner.nextDouble();
