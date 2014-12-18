@@ -11,12 +11,14 @@ import java.util.*;
 
 public class Question2 extends HelpfulMethods{
 
+	private static char letterGrade = 'A'; 
+	
 	public static void main(String[] args) {
 		
 		// Input test scores
 		double[] testScores = new double[5];
 		Scanner scanner = new Scanner(System.in);
-		for(int i=0; i<4; i++) {
+		for(int i=0; i<5; i++) {
      		int count = i + 1;
 			System.out.println("Enter the " + count + " test score");
 			double score = scanner.nextDouble();
@@ -33,7 +35,19 @@ public class Question2 extends HelpfulMethods{
 		 double average = (testScores[0] + testScores[1] + testScores[2] + testScores[3] + testScores[4]) / 5;
 		 // average = Math.round((average * 10) / 10);
 		 print("The average test score is " + average);
-		
+		 
+		 if(average > 89) {
+			 letterGrade = 'A';
+		 } else if(average > 79) {
+			 letterGrade = 'B';
+		 } else if(average > 69) {
+			 letterGrade = 'C';
+		 } else if(average > 59) {
+			 letterGrade = 'D';
+		 } else {
+			 letterGrade = 'F';
+		 }
+		System.out.println("The letter score is " + letterGrade);
 	}
 
 }
