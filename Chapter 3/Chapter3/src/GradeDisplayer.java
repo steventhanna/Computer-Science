@@ -25,11 +25,23 @@ public class GradeDisplayer {
 		}
 	}
 	
+	public static void switchStatement() {
+		// switch will work with char, byte, short, int or String
+		int inputScore = (int)(Math.round(score));
+		switch(inputScore) {
+			case 100: 
+		}
+		
+	}
+	
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
 		inputInfo();
 		letterGrade();
 		System.out.println(grade);
+		for(int i=100; i>0; i--) {
+			System.out.println("case " + i + ":");
+		}
 	}
 
 }
