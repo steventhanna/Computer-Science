@@ -10,33 +10,27 @@
 
 public class Question3 extends HelpfulMethods {
 
-	private static String number;
+	private static int number;
 	
-	public static boolean inputAndCheck() {
-		number = inputString("Input a number between 0 and 1000");
-		int intNumber = Integer.parseInt(number);
-		if((intNumber > 0) && (intNumber < 1000)) {
-			return true;
+	public static void inputAndCheck() {
+		number = inputInt("Input a number between 0 and 1000");
+		if((number > 0) && (number < 1000)) {
+			return;
 		} else {
-			return false;
+			inputAndCheck();
 		}
 	}
 	
 	public static void calculate() {
-		if(inputAndCheck()) {
-			System.out.println(number.length());
-			String[] calculateArray = new String[number.length()];
-			for(int i = 0; i>number.length(); i++) {
-				calculateArray[i] = number.substring(i);
-			}
-			int numberLength = number.length();
-			int[] numberHolder = new int[3];
-			for(int i=0; i>3; i++) {
-				numberHolder[i] = Integer.parseInt(calculateArray[i]);
-			}
-			System.out.println(numberHolder[2]);
-			
-		}
+		inputAndCheck();
+		int number1, number2, number3, number4, numberINT; 
+		numberINT = number / 10;
+		number2 = numberINT % 10;
+		number3 = number % 10;
+		number1 = numberINT / 10;
+		System.out.println(number1 + " " + number2 + " " + number3);
+		int total = number1 + number2 + number3;
+		System.out.println("Total is: " + total);
 	}
 	
 
@@ -45,7 +39,6 @@ public class Question3 extends HelpfulMethods {
 		// TODO Auto-generated method stub
 		// inputInt("Input a number between 0 and 1000");
 		calculate();
-		
 		
 
 	}
