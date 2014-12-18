@@ -1,13 +1,3 @@
-/*
- * Steven Hanna
- * Chapter 2: Program 5
- * Objective:  The equation represents an equation for compound interest, where P 
- * represents your principal or starting value, r your nominal interest rate in decimal form, n 
- * the number of times the interest is compounded, and t represents time in years. Write a program 
- * that prompts the user to enter in the required information to calculate the future value of an
- * investment. It should round the answer to the nearest penny.
- */
-
 import java.util.*;
 
 public class Question5 extends HelpfulMethods {
