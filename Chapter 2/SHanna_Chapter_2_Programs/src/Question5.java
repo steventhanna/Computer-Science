@@ -10,6 +10,7 @@
 
 import java.util.*;
 
+@SuppressWarnings("unused")
 public class Question5 extends HelpfulMethods {
 	private static double principal;
 	private static double nominalInterest;
