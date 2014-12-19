@@ -28,7 +28,5 @@ public class DiceRoll {
 				System.out.println("You win");
 				break;
 		}
-
 	}
-
 }
