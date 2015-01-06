@@ -10,19 +10,34 @@ import java.util.*;
 
 public class SentinelValue {
 
-	private static int userEnteredNumbers;
+	private static int userEnteredNumbersSum;
+	private static double userEnteredNumbersAverage;
+	private static ArrayList<Integer> userEnteredNumbers = new ArrayList<Integer>();
 
 	public static void inputNumbers() {
 		Scanner scanner = new Scanner(System.in);
 		System.out.println("Enter a number: ");
 		int number = scanner.nextInt();
 		if(number != 0) {
-			userEnteredNumbers += number;
+			// userEnteredNumbers += number;
+			userEnteredNumbers.add(number);
 			inputNumbers();
 		} else {
-			System.out.println("The sum of the numbers entered is: " + userEnteredNumbers);	
+			calculateSum();
+			calculateAverage();
+			System.out.println("The sum of the numbers is: " + userEnteredNumbersSum);
+			System.out.println("The average of the numbers is: " + userEnteredNumbersAverage);
 		}
-		
+	}
+
+	public static void calculateSum() {
+		for(int i = 0; i<userEnteredNumbers.size(); i++) {
+			userEnteredNumbersSum += userEnteredNumbers.get(i);
+		}
+	}
+	
+	public static void calculateAverage() {
+		userEnteredNumbersAverage = userEnteredNumbersSum / userEnteredNumbers.size();
 	}
 
 	public static void main(String[] args) {
