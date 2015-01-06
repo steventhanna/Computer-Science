@@ -20,6 +20,17 @@ public class RepeatAdditionQuiz {
 		randomNumbers[1] = randy.nextInt(10);
 		randomNumbers[2] = randomNumbers[0] + randomNumbers[1];
 	}
+
+	// Implement keep asking questions until five are correct
+	private static int questionCounter;
+
+	public static boolean fiveQuestionComplete() {
+		if(questionCounter == 5) {
+			return false;
+		} else {
+			return true;
+		}
+	}
 	
 	public static void getInput() {
 		Scanner scanner = new Scanner(System.in);
@@ -53,21 +64,48 @@ public class RepeatAdditionQuiz {
 			return false;
 		}
 		System.out.println("Correct");
+		questionCounter++;
+		System.out.println("Amount of questions answered correctly: " + questionCounter);
 		return true;
 	}
 
 	public static void go() {
-		// Randomize numbers
-		generateRandomNumbers();
-		// Ask user to calculate sum
-		getInput();
-		if(!checkSums()) {
-			getSecondaryInput();
-			differentCheck();
-		} else {
-			System.out.println("Correct");
+		while(fiveQuestionComplete()) {
+			// Randomize numbers
+			generateRandomNumbers();
+			// Ask user to calculate sum
+			getInput();
+			if(!checkSums()) {
+				getSecondaryInput();
+				differentCheck();
+			} else {
+				System.out.println("Correct");
+				questionCounter++;
+				System.out.println("Amount of questions answered correctly: " + questionCounter);
+			}
+			continueQuestions();
 		}
 	}
+
+	public static void continueQuestions() {
+		Scanner scanner = new Scanner(System.in);
+		System.out.println("Would you like to continue solving questions?");
+		System.out.println("Yes: 1, No: 0");
+		int response = scanner.nextInt();
+		// Use some cases here
+		System.out.println("");		// Need a break here for spacing
+		if(response == 1) {
+			go();
+		} else if((response > 1) && (response < 0)) {
+			System.out.println("You did not enter either 1 or 0 ... Shame on you");
+			continueQuestions();
+		} else {
+			System.out.println("Done");
+		}
+	}
+
+
+
 	
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
