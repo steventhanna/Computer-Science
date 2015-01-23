@@ -33,7 +33,7 @@ public class SentinelValue {
 	public static void calculateSum() {
 		for(int i = 0; i<userEnteredNumbers.size(); i++) {
 			userEnteredNumbersSum += userEnteredNumbers.get(i);
-		}
+		}0in
 	}
 	
 	public static void calculateAverage() {

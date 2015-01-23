@@ -9,7 +9,7 @@ public class Pattern2 {
 				System.out.print(" ");
 			}
 			for(int j=0; j<=i; j++) {
-				System.out.printf("%1s", s);
+				System.out.print(s);
 			}
 		}
 
