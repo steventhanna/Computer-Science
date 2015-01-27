@@ -1,3 +1,14 @@
+/*
+ * Steven Hanna
+ * Program 2 - Program2.java
+ * Purpose: Write a program that plays the popular rock-paper-scissor game. 
+ * (Paper covers rock, rock beats scissor, and scissors cuts paper.) The 
+ * program randomly generates a number 0, 1, or 2 representing scissor, 
+ * rock, and paper. The program prompts the user to enter a number 0, 1, 
+ * or 2 and displays a message indicating whether the user or the computer 
+ * wins, loses, or draws. Here are sample runs:
+ */
+
 import java.util.*;
 
 public class Program2 {
@@ -27,12 +38,14 @@ public class Program2 {
 	}
 	
 	public static void compareAnswers() {
-		if(userWin(userNumber, AI)) {
+		if(userWin(userNumber, AI) == 2) {
 			System.out.println("User wins");
 			userWins++;
-		} else {
+		} else if(userWin(userNumber, AI) == 1) {
 			System.out.println("AI wins");
 			AIWins++;
+		} else {
+			System.out.println("TIE");
 		}
 		if(AI == 0) {
 			System.out.println("AI is rock");
@@ -55,18 +68,22 @@ public class Program2 {
 		
 	}
 	
-	public static boolean userWin(int user, int AI) {
+	public static int userWin(int user, int AI) {
+		// 0 == tie
+		// 1 == AI wins
+		// 2 == user wins
+		
 		if(user == AI) {
 			System.out.println("Tie");
-			return false;
+			return 0;
 		} else if((user == 0) && (AI == 2)) {
-			return false;
+			return 1;
 		} else if((AI == 0) && (user == 2)) {
-			return true;
+			return 2;
 		} else if(user > AI) {
-			return true;
+			return 2;
 		} else {
-			return false;
+			return 1;
 		}
 	}
 	 

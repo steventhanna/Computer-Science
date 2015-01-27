@@ -1,3 +1,12 @@
+/*
+ * Steven Hanna
+ * Program 1 - Program1.java
+ * Purpose:  Write a program that prompts the user to enter three integers
+ * and sorts the three integers. The integers are entered from the input 
+ * dialogs and stored in variables num1, num2, and num3 respectively. 
+ * The program sorts and outputs the numbers from smallest to largest.
+ */
+
 import java.util.*;
 
 public class Program1 {

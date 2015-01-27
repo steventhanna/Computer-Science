@@ -1,3 +1,13 @@
+/*
+ * Steven Hanna
+ * Program 3 - Program3.java
+ * Purpose: (Counting positive and negative numbers and computing the average of numbers)
+ * Write a program that reads an unspecified number of integers. Determines how many 
+ * positive and negative values have been read, and computes the total and average of
+ * the input values (not counting zeros). Your program ends with the input 0. Display 
+ * the average as a floating-point number.
+ */
+
 import java.util.*;
 
 public class Program3 {
