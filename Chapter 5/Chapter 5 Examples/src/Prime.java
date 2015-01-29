@@ -1,5 +1,9 @@
-import java.util.Scanner;
-
+/*
+ * @author: Steven Hanna
+ * @class: Prime
+ * @date: 1.29.15
+ * @description: print n prime numbers
+ */
 public class Prime {
 	
 	public static boolean isPrime(long n) {
