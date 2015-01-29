@@ -31,7 +31,21 @@ public class Prime {
 			primer++;
 		}
 		// Print out ten at a time
-		for(int i=0)
+		int printCounter = 0;
+		int remainderCounter = 0;
+		while(printCounter < amountOfPrimes) {
+			printCounter += 10;
+			for(int i=printCounter - 10; i < printCounter; i++) {
+				System.out.print(amountCounter[i] + " ");
+				remainderCounter++;
+			}
+			System.out.println("");
+			printCounter = remainderCounter;
+		}
+		int finalRemainder = amountOfPrimes - printCounter;
+		for(int i=remainderCounter; i < finalRemainder + remainderCounter; i++) {
+			System.out.print(amountCounter[i]);
+		}	
 	}
 	
 	public static void main(String[] args) {
