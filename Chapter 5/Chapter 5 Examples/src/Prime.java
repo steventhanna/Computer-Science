@@ -50,7 +50,6 @@ public class Prime {
 		}
 		int size = factors.size();
 		int lineCounter = 0;
-		int firstLineCounter = 0;
 		for(int i = 0; i<size; i++) {				
 			if(lineCounter < 10) {
 				System.out.print(factors.get(i) + " ");

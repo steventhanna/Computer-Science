@@ -32,7 +32,7 @@
 \date{\today}
 \maketitle
 
-\section{isPrime}
+\section{isPrime()}
 The objective of the \textit{isPrime} method is to determine whether or not a specified number was a prime number.  The two methods that I will be comparing are those of \textbf{Andrew Swinston} and \textbf{Mitchell Adair}.  
 \begin{lstlisting}
 // PrimeFinder.java
@@ -120,7 +120,7 @@ In regards to memory management, both of these methods utilize the same amount o
 
 Upon reflection, the drawback to both programs, lies in the syntax itself.  Both programs assume that \textbf{prime} or \textbf{isPrime} respectively, to be \textbf{true}.  Although the program remains operational, exceptions can be triggered that will result in a \textbf{true} return statement, when it should have been false.  This could drastically alter the results of the program.  It is much safer to assume \textbf{false}, unless proven otherwise.
 
-\section{printPrimes}
+\section{printPrimes()}
 The objective of the \textit{printPrimes} method is to print $n$ amount of prime numbers, in a row with only $10$ values each.  Because \textbf{Andrew Swinston} did not include the \textit{printPrimes} statement in his submission, \textbf(Fatima Azfar) and \textbf{Mitchell Adair's} programs will be used. 
 
 \begin{lstlisting}
@@ -218,4 +218,33 @@ double & 8\\
 Personally, I find that \textit{FindingPrimeNumbers} maintains the clearest, and most concise code.  \textit{PrintPrimes} uses an additional counter, cluttering the code, which could ultimately result in future errors.
 
 However, when executing \textit{FindingPrimeNumbers}, a strange result is displayed.  The program has each number neatly in a row, however when it has to go to a new line, it seemingly randomly decides an amount of line spaces to execute, resulitng in a jumbled mess.  Therefore, \textit{PrintPrimes} is the superior algorithim.
+\newpage
+\section{factor()}
+Print all of the factors of a given number.  
+\begin{lstlisting}
+// Prime.java
+// Steven Hanna
+public static void printFactors(int number) {
+		ArrayList<Integer> factors = new ArrayList<Integer>();
+		for(int i = number-1; i>0; i--) {
+			if(number % i == 0) {
+				factors.add(i);
+			}
+		}
+		int size = factors.size();
+		int lineCounter = 0;
+		for(int i = 0; i<size; i++) {				
+			if(lineCounter < 10) {
+				System.out.print(factors.get(i) + " ");
+				lineCounter++;
+				if((lineCounter == 9) && i < 10) {
+					lineCounter++;
+				}
+			} else {
+				System.out.println(factors.get(i) + " ");
+				lineCounter = 1;
+			}
+		}
+	}
+\end{lstlisting}
 \end{document}
