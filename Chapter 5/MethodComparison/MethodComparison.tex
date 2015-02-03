@@ -1,0 +1,221 @@
+\documentclass[12pt]{article}
+
+\usepackage[top=1in, bottom=1in, left=1in, right=1in]{geometry}
+\usepackage{listings}
+\usepackage{color}
+
+\definecolor{dkgreen}{rgb}{0,0.6,0}
+\definecolor{gray}{rgb}{0.5,0.5,0.5}
+\definecolor{mauve}{rgb}{0.58,0,0.82}
+
+\lstset{frame=tb,
+  language=Java,
+  aboveskip=3mm,
+  belowskip=3mm,
+  showstringspaces=false,
+  columns=flexible,
+  basicstyle={\small\ttfamily},
+  numbers=none,
+  numberstyle=\tiny\color{gray},
+  keywordstyle=\color{blue},
+  commentstyle=\color{dkgreen},
+  stringstyle=\color{mauve},
+  breaklines=true,
+  breakatwhitespace=true,
+  tabsize=3
+}
+
+
+\begin{document}
+\title{Method Comparison}
+\author{Steven Hanna}
+\date{\today}
+\maketitle
+
+\section{isPrime}
+The objective of the \textit{isPrime} method is to determine whether or not a specified number was a prime number.  The two methods that I will be comparing are those of \textbf{Andrew Swinston} and \textbf{Mitchell Adair}.  
+\begin{lstlisting}
+// PrimeFinder.java
+// Andrew Swinston
+
+public class PrimeFinder {
+	public static void main(String[] args) {
+		System.out.println(isPrime(5));
+	}
+	public static boolean isPrime(int num) {
+		boolean isPrime = true;
+			if(num == 1) {
+				return false;
+			}
+			if(num % 2 == 0) {
+				isPrime = false;
+			}
+			if(num == 2) {
+				isPrime = true;
+			}
+			for(int i = 3; i <= (num / 2); i += 2) {
+				if(num % i == 0) {
+					isPrime = false;
+				}
+			}
+		return isPrime;
+	}
+}
+
+\end{lstlisting}
+\newpage
+\begin{lstlisting}
+// FindingPrimeNumbers.java
+// Mitchell Adair
+import java.util.Scanner;
+
+public class FindingPrimeNumbers {
+
+	public static void main(String[] args) {
+		//System.out.println( isPrime( 4 ) );
+		Scanner input = new Scanner( System.in );
+		int numOfPrimes = input.nextInt();
+		printPrimes( numOfPrimes );
+	}
+	
+	public static boolean isPrime( int num ) {
+		boolean prime = true;
+		for (int i = 2; i<=(num/2); i++) {
+			if (num%i == 0) {
+				prime = false;
+			}
+		}
+		return prime;
+	}
+}
+
+\end{lstlisting}
+
+\subsection{Memory Management}
+For general calculations of memory management: 
+
+\begin{center}
+\begin{tabular}{l c r}
+Java Type & Bytes Required \\ \hline \hline
+boolean & 1 \\
+byte & 1 \\ \hline
+char & 2 \\
+short & 2 \\ \hline
+int & 4 \\
+float & 4 \\ \hline
+long & 8 \\
+double & 8\\
+\end{tabular}
+\end{center}
+
+\textbf{primeFinder}: $1 (boolean)  + 4 (int) + 4 (int)  =  9(bytes)$
+
+\textbf{FindingPrimeNumbers}: $1 (boolean) + 4 (int) + 4(int) = 9(bytes)$ 
+ 
+ 
+In regards to memory management, both of these methods utilize the same amount of memory. 
+
+\subsection{Code Readability}
+\textit{FindingPrimeNumbers} maintains the clearest, and most concise code.  Although this is not a true test for efficiency and accuracy, it allows the programmer to easily make changes without stumbling through many un-needed lines. 
+
+Upon reflection, the drawback to both programs, lies in the syntax itself.  Both programs assume that \textbf{prime} or \textbf{isPrime} respectively, to be \textbf{true}.  Although the program remains operational, exceptions can be triggered that will result in a \textbf{true} return statement, when it should have been false.  This could drastically alter the results of the program.  It is much safer to assume \textbf{false}, unless proven otherwise.
+
+\section{printPrimes}
+The objective of the \textit{printPrimes} method is to print $n$ amount of prime numbers, in a row with only $10$ values each.  Because \textbf{Andrew Swinston} did not include the \textit{printPrimes} statement in his submission, \textbf(Fatima Azfar) and \textbf{Mitchell Adair's} programs will be used. 
+
+\begin{lstlisting}
+// PrintPrimes.java
+// Fatima Azfar
+import java.util.Scanner.*; 
+
+public class printPrimes {
+	public static void printPrimes(int num) {
+		int counter = 0;
+		int lineTen = 0;
+		int testPrime = 2;
+		while(counter<num) {
+			if(isPrime(testPrime)) {
+				if(lineTen<10) {
+					System.out.print("  "+testPrime);		
+				}
+				else {
+					System.out.print("\n  "+testPrime);
+					lineTen=0;
+				}
+				counter++;
+				lineTen++;
+			}			
+			testPrime++;
+		}
+	}
+		public static void main(String[]args) {
+		Scanner input = new Scanner(System.in);
+		System.out.println("Enter Number");
+		int numberOfPrimes= input.nextInt();
+		printPrimes(numberOfPrimes);
+		input.close();
+	}
+}
+\end{lstlisting}
+
+\begin{lstlisting}
+// FindingPrimeNumbers.java
+// Mitchell Adair
+import java.util.Scanner;
+
+public class FindingPrimeNumbers {
+
+	public static void main(String[] args) {
+		//System.out.println( isPrime( 4 ) );
+		Scanner input = new Scanner( System.in );
+		int numOfPrimes = input.nextInt();
+		printPrimes( numOfPrimes );
+	}
+	public static void printPrimes( int num ) {
+		int counter = 0, primeTest = 2;
+		while (counter < num) {
+			if (isPrime(primeTest)) {
+				if (counter != num-1) {
+					System.out.print( primeTest + ", " );
+					counter++;
+				} else {
+					System.out.print( primeTest + "." );
+					counter++;
+				}
+			}
+			if (counter%10 == 0) {
+				System.out.println();
+			}
+			primeTest++;
+		}
+	}
+}
+\end{lstlisting}
+\newpage
+\subsection{Memory Management}
+For general calculations of memory management: 
+
+\begin{center}
+\begin{tabular}{l c r}
+Java Type & Bytes Required \\ \hline \hline
+boolean & 1 \\
+byte & 1 \\ \hline
+char & 2 \\
+short & 2 \\ \hline
+int & 4 \\
+float & 4 \\ \hline
+long & 8 \\
+double & 8\\
+\end{tabular}
+\end{center}
+
+\textbf{PrintPrimes}: $4(int) + 4(int) + 4(int) + 4(int) = 16(bytes)$
+
+\textbf{FindingPrimeNumbers} $4(int) + 4(int) + 4(int) = 12(bytes)$ 
+
+\textit{FindingPrimeNumbers} is more efficient, only using $12 bytes$.  
+\subsection{Code Readability}
+Personally, I find that \textit{FindingPrimeNumbers} maintains the clearest, and most concise code.  \textit{PrintPrimes} uses an additional counter, cluttering the code, which could ultimately result in future errors.
+
+There is no apparent drawback to either method, besides the memory management issues in \textit{PrintPrimes}.
+\end{document}

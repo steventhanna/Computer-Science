@@ -1,9 +1,10 @@
-/*
+/**
  * @author: Steven Hanna
  * @class: Prime
  * @date: 1.29.15
  * @description: print n prime numbers
  */
+
 public class Prime {
 	
 	public static boolean isPrime(long n) {
@@ -35,6 +36,7 @@ public class Prime {
 			primer++;
 		}
 		// Print out ten at a time
+		// Probably should have not used an array
 		int printCounter = 0;
 		int remainderCounter = 0;
 		while(printCounter < amountOfPrimes) {
@@ -53,7 +55,7 @@ public class Prime {
 	}
 	
 	public static void main(String[] args) {
-		printNumbers(300);
+		printNumbers(303);
 
 	}
 
