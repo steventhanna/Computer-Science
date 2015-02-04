@@ -64,7 +64,7 @@ public class Prime {
 		}
 	}
 	public static void main(String[] args) {
-		// printPrimes(211);
+		printPrimes(211);
 		printFactors(200000);
 
 	}
