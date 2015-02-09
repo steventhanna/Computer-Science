@@ -8,9 +8,10 @@ import java.util.ArrayList;
  */
 
 public class Prime {
+	private int hello = 5;
 	
 	public static boolean isPrime(long n) {
-	    if(n <= 3) {
+		if(n <= 3) {
 	        return n > 1;
 	    } else if(n % 2 == 0 || n % 3 == 0) {
 	        return false;
@@ -22,6 +23,7 @@ public class Prime {
 	        }
 	        return true;
 	    }
+	    
 	}
 
 	public static void printPrimes(int num) {
