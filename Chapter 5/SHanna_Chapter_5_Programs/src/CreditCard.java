@@ -1,37 +1,27 @@
 
 public class CreditCard {
 
-	private long cardNumber;
+	private String cardNumber;
 	private int[] seperatedNumber;
 	private String cardType;
 
 	// Create constructor
-	public CreditCard(long number) {
+	public CreditCard(String number) {
 		// Assign number to cardNumber
 		cardNumber = number;
 	}
 
-	// Separate digits of cardNumber into an array  seperatedNumber
-	public void seperateDigits() {
-		// Get length of cc 
-		int length = (int) Math.log10(cardNumber) + 1;
+	// Seperate card number from string into array
+	public void seperateDigitsFromString() {
+		int length = cardNumber.length();
 		if(cardLengthLongEnough(length)) {
-			// Init seperatedNumber
 			seperatedNumber = new int[length];
-			// Separate digits from cc number into array
-			long cardClone = cardNumber; // create card clone to not damage initial cardNumber
-			int counter = length; // counter to add to array
-			while(cardClone > 0) {
-				int d = (int) (cardClone / 10);
-				int k = (int) (cardClone - d * 10);
-				cardClone = d;
-				seperatedNumber[counter - 1] = k; // take into account the array index system
-				counter--;
+			for(int i = 0; i < length; i++) {
+				char num = cardNumber.charAt(i);
+				String number = "" + num;
+				seperatedNumber[i] = Integer.parseInt(number);
 			}
-		} else {
-			System.out.println("Card number is not long enough");
 		}
-		
 	}
 
 	// Check to see if card has enough numbers
@@ -59,40 +49,75 @@ public class CreditCard {
 	}
 
 	// Implement the Luhn check for validity
-	public void validity() {
-		// reassign array to avoid damage
-		int[] numbersClone = new int[seperatedNumber.length];
+	public boolean validity() {
+		// Double every number from right to left.
+		// If doubling digit == two-digit num, add two digits to get a single digit num
+		int firstSum = 0;
+		int secondSum = 0;
 		for(int i = 0; i < seperatedNumber.length; i++) {
-			numbersClone[i] = seperatedNumber[i];
-		}
-		// Double every second digit from left to right
-		int counter = 1;
-		int arrayCounter = numbersClone.length;
-		int length = numbersClone.length;
-		int amountToDouble = length / 2;
-		while(counter <= amountToDouble) {
-			if(counter == 1) {
-				arrayCounter -= 1;
+			// if array id is odd, double
+			if((i % 2 != 0) && (i > 0)) {
+				// If number is doubled, add to one total
+				seperatedNumber[i] *= 2;
+				// Check if num is > 10
+				if(seperatedNumber[i] > 10) {
+					// harvest nums and add together
+					seperatedNumber[i] = sumDigits(seperatedNumber[i]);
+				}
+				firstSum += seperatedNumber[i];
 			} else {
-				arrayCounter -= 2;
+				// If number is not doubled, add to another total
+				secondSum += seperatedNumber[i];
 			}
-			numbersClone[arrayCounter] *= 2;
-			counter++;
 		}
-		for(int i=0; i < numbersClone.length; i++) {
-			System.out.print(numbersClone[i]);
+
+		// Add both together
+		int total = firstSum + secondSum;
+		// If number above % 10 == 0 num is valid
+		if(total % 10 == 0) {
+			return true;
+		} else {
+			return false;
+		}
+	}
+
+	// Add digits of a num
+	public int sumDigits(int n) {
+		int sum = 0;
+		while(n > 0) {
+			sum += n % 10;
+			n /= 10;
+		}
+		return sum;
+	}
+	
+	public boolean go() {
+		seperateDigitsFromString();
+		for(int i = 0; i < seperatedNumber.length; i++) {
+			System.out.print(seperatedNumber[i]);
+		}
+		System.out.println("");
+		if(validity()) {
+			for(int i = 0; i < seperatedNumber.length; i++) {
+				System.out.print(seperatedNumber[i]);
+			}
+			System.out.println("");
+			return true;
+		} else {
+			for(int i = 0; i < seperatedNumber.length; i++) {
+				System.out.print(seperatedNumber[i]);
+			}
+			System.out.println("");
+			return false;
 		}
 	}
 
 	public static void main(String[] args) {
-		CreditCard card = new CreditCard(43885760184026L);
-		// System.out.print(card.seperateDigits());
-		card.seperateDigits();
-		for(int i=0; i < card.seperatedNumber.length; i++) {
-			System.out.print(card.seperatedNumber[i] + " ");
-		}
-		card.validity();
-		
+		CreditCard card = new CreditCard("4388576018402626");
+		System.out.println(card.go());
+		CreditCard differentCard = new CreditCard("4388576018410707");
+		System.out.println(differentCard.go());
+		// System.out.println(0 % 0);
 	}
 
 
