@@ -1,6 +1,17 @@
+/**
+* @author Steven Hanna
+* @class Program4.java
+* @date 2/9/15
+* @description Write a method to compute a series of nums.  Write a test program
+* to print out the following table
+*/
 
 public class Program4 {
 
+	/**
+	* Compute the given series
+	* @param int n - in regards to N in the series
+	*/
 	public static void computeSeries(int n) {
 		int number = n;
 		double total = 0.0;
@@ -12,7 +23,9 @@ public class Program4 {
 		}
 		System.out.println(total);
 	}
-	
+	/**
+	* Prints the results, along with a table.
+	*/
 	public static void printResults() {
 		double value = 0;
       	System.out.println("i" + "\t\t" +  "m(i)");
