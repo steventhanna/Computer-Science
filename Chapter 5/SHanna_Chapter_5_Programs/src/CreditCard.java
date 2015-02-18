@@ -1,87 +1,95 @@
+/**
+* @author Steven Hanna
+* @class CreditCard
+* @date 2/17/15
+* @description determines the validity of a credit card number based on the 
+* Luhn Check
+* @note this program does not prompt the user to enter a credit card number.  
+* Instead, creditcard numbers must be passed as an object. Then you can run the 
+* primary method determineValidity(), which encapsulates several other methods
+* into a final statement.
+*/
 
 public class CreditCard {
 
-	private String cardNumber;
-	private int[] seperatedNumber;
-	private String cardType;
+	private String card;
+	private int[] cardNumbers;
+	private String cardVendor;
 
-	// Create constructor
-	public CreditCard(String number) {
-		// Assign number to cardNumber
-		cardNumber = number;
+	/**
+	* Constructor for CreditCard
+	* @param String cardNumber.  Primary input for users.
+	*/
+	public CreditCard(String cardNumber) {
+		card = cardNumber;
 	}
 
-	// Seperate card number from string into array
-	public void seperateDigitsFromString() {
-		int length = cardNumber.length();
-		if(cardLengthLongEnough(length)) {
-			seperatedNumber = new int[length];
-			for(int i = 0; i < length; i++) {
-				char num = cardNumber.charAt(i);
-				String number = "" + num;
-				seperatedNumber[i] = Integer.parseInt(number);
-			}
-		}
-	}
-
-	// Check to see if card has enough numbers
-	public boolean cardLengthLongEnough(int length) {
-		if((length >= 13) && (length <= 16)) {
-			return true;
+	/** 
+	* Determines card vendor based on first two numbers of card
+	*/
+	public void cardVendor() {
+		int firstNumber = convertStringToInt(card.substring(0,1));
+		int secondNumber = convertStringToInt(card.substring(1,2));
+		// System.out.print(firstNumber + " " + secondNumber);
+		if(firstNumber == 4) {
+			cardVendor = "VISA";
+		} else if(firstNumber == 5) {
+			cardVendor = "MASTER";
+		} else if(firstNumber == 6) {
+			cardVendor = "DISCOVER";
+		} else if((firstNumber == 3) && (secondNumber == 7)) {
+			cardVendor = "AMEX";
 		} else {
-			return false;
+			cardVendor = "UNKNOWN";
 		}
 	}
 
-	// Determine the card vendor
-	public void determineCardVendor() {
-		int numberOne = seperatedNumber[0];
-		int numberTwo = seperatedNumber[1];
-		if(numberOne == 4) {
-			cardType = "visa";
-		} else if(numberOne == 5) {
-			cardType = "master";
-		} else if((numberOne == 3) && (numberTwo == 7)) {
-			cardType = "amex";
-		} else if(numberOne == 6) {
-			cardType = "discover";
+	/**
+	* Transfers the string into an int[]
+	*/
+	public void assignCardToArray() {
+		int length = card.length();
+		cardNumbers = new int[length];
+		for(int i = 0; i < length - 1; i++) {
+			cardNumbers[i] = convertStringToInt(card.substring(i, i + 1));
 		}
+		// Accounts for an error somewhere
+		cardNumbers[length - 1] = convertStringToInt(card.substring(length - 1));
+
 	}
 
-	// Implement the Luhn check for validity
-	public boolean validity() {
-		// Double every number from right to left.
-		// If doubling digit == two-digit num, add two digits to get a single digit num
-		int firstSum = 0;
-		int secondSum = 0;
-		for(int i = 0; i < seperatedNumber.length; i++) {
-			// if array id is odd, double
-			if((i % 2 != 0) && (i > 0)) {
-				// If number is doubled, add to one total
-				seperatedNumber[i] *= 2;
-				// Check if num is > 10
-				if(seperatedNumber[i] > 10) {
-					// harvest nums and add together
-					seperatedNumber[i] = sumDigits(seperatedNumber[i]);
+	/**
+	* Performs the Luhn Check
+	* @return boolean value based on the validity of card
+	*/
+	public boolean luhnCheck() {
+		// double all numbers with even array id's
+		for(int i = 0; i < cardNumbers.length; i++) {
+			if(i % 2 == 0) {
+				cardNumbers[i] *= 2;
+				if(cardNumbers[i] > 9) {
+					// add up the two digits
+					cardNumbers[i] = sumDigits(cardNumbers[i]);
 				}
-				firstSum += seperatedNumber[i];
-			} else {
-				// If number is not doubled, add to another total
-				secondSum += seperatedNumber[i];
 			}
 		}
-
-		// Add both together
-		int total = firstSum + secondSum;
-		// If number above % 10 == 0 num is valid
-		if(total % 10 == 0) {
+		// Add up everything in array
+		int sum = 0;
+		for(int i = 0; i < cardNumbers.length; i++) {
+			sum += cardNumbers[i];
+		}
+		if(sum % 10 == 0) {
 			return true;
 		} else {
 			return false;
 		}
 	}
 
-	// Add digits of a num
+	/**
+	* Adds all of the digits in a given number
+	* @param int n
+	* @return sum of the digits of int n
+	*/
 	public int sumDigits(int n) {
 		int sum = 0;
 		while(n > 0) {
@@ -90,35 +98,33 @@ public class CreditCard {
 		}
 		return sum;
 	}
+
+	/**
+	* Converts a string to an int
+	* @param String s that is to be converted to an int
+	* @return integer number that is the new version of the String
+	*/
+	public int convertStringToInt(String s) {
+		int num = Integer.parseInt(s);
+		return num;
+	}
 	
-	public boolean go() {
-		seperateDigitsFromString();
-		for(int i = 0; i < seperatedNumber.length; i++) {
-			System.out.print(seperatedNumber[i]);
-		}
-		System.out.println("");
-		if(validity()) {
-			for(int i = 0; i < seperatedNumber.length; i++) {
-				System.out.print(seperatedNumber[i]);
-			}
-			System.out.println("");
-			return true;
+	/**
+	* A container that runs all mandatory methods to determine card validity
+	*/
+	public void determineValidty() {
+		cardVendor();
+		assignCardToArray();
+		System.out.print(cardVendor + " " + card + " is ");
+		if(luhnCheck()) {
+			System.out.print("valid");
 		} else {
-			for(int i = 0; i < seperatedNumber.length; i++) {
-				System.out.print(seperatedNumber[i]);
-			}
-			System.out.println("");
-			return false;
+			System.out.print("invalid");
 		}
 	}
 
 	public static void main(String[] args) {
-		CreditCard card = new CreditCard("4388576018402626");
-		System.out.println(card.go());
-		CreditCard differentCard = new CreditCard("4388576018410707");
-		System.out.println(differentCard.go());
-		// System.out.println(0 % 0);
+		CreditCard card = new CreditCard("4388576018410707");
+		card.determineValidty();
 	}
-
-
 }

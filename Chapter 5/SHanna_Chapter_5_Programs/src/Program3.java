@@ -10,7 +10,7 @@ import java.util.*;
 public class Program3 {
 
 	/**
-	* This method reverses the given intger
+	* This method reverses the given integer
 	* @param integer to be reversed
 	*/
 	public static void reverse(int number) {

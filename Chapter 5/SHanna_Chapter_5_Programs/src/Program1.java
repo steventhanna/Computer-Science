@@ -2,7 +2,7 @@
 * @author Steven Hanna
 * @class Program1
 * @date 2/9/15
-* @description Write a program that displays the first 100 pentagonal numbers with 10 numbers on each line
+* @description Write a program that displays the first 100 pentgonal numbers with 10 numbers on each line
 */
 public class Program1 {
 
