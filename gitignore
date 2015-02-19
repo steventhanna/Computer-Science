@@ -2,6 +2,7 @@
 .metadata
 .gradle
 .class
+.classpath
 ./markers
 bin/
 tmp/
