@@ -5,24 +5,16 @@ public class TwoDArray {
 	public static void main(String[] ars) {
 		// 2-D arrays
 		int[][] matrix1 = {
-				{1, 2, 3},
-				{4, 5, 6}
+				{1, 2, 3, 7, 9},
+				{4, 5, 6, 9, 5}
 		};
 		
-		int[][] matrix2 = new int[2][3];
-		/*
-		for(int row = 0; row < matrix2.length; row++) {
-			for(int col = 0; col < )
-		}
+		System.out.println(matrix1[1][3]);
+		int[][] matrix2 = new int[matrix1[0].length][matrix1[1].length];
 		
-		Random random = new Random();
-		*/
-		
-		for(int i = 0; i < matrix1.length; i++) {
-			for(int a = 0; a < matrix1[i].length; a++) {
-				System.out.println(matrix1[i][a]);
-			}
-		}
-		// System.out.println(matrix1[0]);
+		matrix2[0][0] = 6;
+		matrix2[0][1] = 12;
+		matrix2[0][2] = 1;
+		matrix2[0][3] = 7;
 	}
 }
