@@ -7,6 +7,7 @@
 
 public class Matrix {
 
+	private int amountOfRows;
 	/**
 	* Amount of rows for the matrix object
 	*/
@@ -132,7 +133,7 @@ public class Matrix {
 	* @return int[][] - the multiplied matrix in its new form
 	*/
 	public static int[][] mulitiplyMatrix(Matrix a, Matrix b) {
-		// If A is an n × m matrix and B is an m × p matrix
+		// If A is an n == m matrix and B is an m == p matrix
 		// result will be a n x p matrix
 		int[][] result = new int[a.rows][b.columns];
 		// Go through and add shit
@@ -142,6 +143,7 @@ public class Matrix {
 
 			}
 		}
+		return result;
 	}
 
 	/**
