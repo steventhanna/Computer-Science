@@ -125,7 +125,8 @@ public class Matrix {
 	* Multiplies one Matrix Object by another
 	* Determine result: Assume Matrix a is n x m , and Matrix b is m x p.
 	* The resulting matrix will be a n x p matrix
-	* Method of Multiplication: Dot product - 
+	* Method of Multiplication: Dot product - multiply each value in first matrix, by 
+	* every value in second matrix.  Add values together.
 	* @param Matrix a - First matrix to multiply
 	* @param Matrix b - Second matrix to multiply
 	* @return int[][] - the multiplied matrix in its new form
