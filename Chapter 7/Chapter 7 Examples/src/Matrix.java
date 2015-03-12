@@ -136,11 +136,10 @@ public class Matrix {
 		// If A is an n == m matrix and B is an m == p matrix
 		// result will be a n x p matrix
 		int[][] result = new int[a.rows][b.columns];
-		// Go through and add shit
-		for(int row = 0; row < a.rows; row++) {
-			int total = 0;
-			for(int col = 0; col < a.columns; col++) {
-
+		// multiply each of matrix 1 by matrix 2
+		for(int rows = 0; rows < a.rows; rows++) {
+			for(int column = 0; column < b.columns; column++) {
+				
 			}
 		}
 		return result;
@@ -169,24 +168,4 @@ public class Matrix {
 			System.out.println();
 		}
 	}
-	
-	public static void main(String[] args) {
-		int[][] test1 = new int[5][5];
-		int[][] test2 = new int[5][5];
-		
-		for(int i = 0; i < 5; i++) {
-			for(int a = 0; a < 5; a++) {
-				test1[i][a] = a;
-				test2[i][a] = a;
-			}
-		}
-		
-		Matrix a = new Matrix(test1);
-		Matrix b = new Matrix(test2);
-		int[][] add = addMatrix(a, b);
-		printMatrix(add);
-		
-	}
-	
-	
 }
