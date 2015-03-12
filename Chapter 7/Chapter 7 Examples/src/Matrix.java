@@ -2,7 +2,7 @@
 * @author Steven T Hanna
 * @date 3/10/15
 * @class Matrix
-* @description create and modify matricies and scalars
+* @description create and modify matrices and scalars
 */
 
 public class Matrix {
