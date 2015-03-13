@@ -26,18 +26,6 @@ public class WorkingWith2D {
 		}
 		return array;
 	}
-
-	public static int[] fisherYates(int[] array) {
-		Random randy = new Random();
-		for(int i = 0; i < array.length; i++) {
-			int index = randy.nextInt(i + 1);
-			// Swap
-			int a = array[index];
-			array[index] = array[i];
-			array[i] = a;
-		}
-		return array;
-	}
 	
 	public static void printArray(int[][] array) {
 		for(int i = 0; i < array.length; i++) {
