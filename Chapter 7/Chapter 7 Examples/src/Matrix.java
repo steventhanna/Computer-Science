@@ -145,6 +145,7 @@ public class Matrix {
 		return result;
 	}
 
+	
 	/**
 	* Prints out the Matrix object
 	*/
