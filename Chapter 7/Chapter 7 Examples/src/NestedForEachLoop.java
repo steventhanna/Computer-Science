@@ -12,12 +12,13 @@ public class NestedForEachLoop {
 		return sum;
 	}
 	
-	public static void exampleTwo(double[][] array) {
+	public static double[][] exampleTwo(double[][] array) {
 		for(int i = 0; i < array.length; i++) {
 			for(int a = 0; a < array[i].length; a++) {
 				array[i][a] += 0.5;
 			}
 		}
+		return array;
 	}
 	
 	
