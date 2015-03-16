@@ -43,7 +43,11 @@ public class Program3 {
 				{5, 8},
 				{7, 9}
 		};
-		int[][] result = multiplyMatricies(one, two);
+		Matrix a = new Matrix(one);
+		Matrix b = new Matrix(two);
+		System.out.println(Matrix.canMultiply(a, b));
+		int[][] result = Matrix.mulitiplyMatrix(a, b);
+		// int[][] result = multiplyMatricies(one, two);
 		Matrix.printMatrix(result);
 	}
 }

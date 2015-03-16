@@ -18,7 +18,7 @@ public class Program5 {
 		}
 		// Find id of m
 		int idM = 0;
-		int mediumNumber = (sorted.length) / 2;
+		int mediumNumber = (sorted.length - 1) / 2;
 		for(int i = 0; i < sorted.length; i++) {
 			if(m == sorted[i]) {
 				idM = i;
@@ -57,7 +57,7 @@ public class Program5 {
 		for(int i = test.length - 1; i >= 0; i--) {
 			test[i] = i;
 		}
-		
+		// Should go from 0 - 9
 		System.out.println(isMedian(test, 4));
 		
 	}
