@@ -28,8 +28,8 @@ public class Matrix {
 	public Matrix(int[][] a) {
 		// this. represents the instance vars of the object
 		amountOfRows = a.length;
-		this.rows = a[0].length;
-		this.columns = a[1].length;
+		this.rows = a.length;
+		this.columns = a[0].length;
 		data = a;
 	}
 	
@@ -134,21 +134,15 @@ public class Matrix {
 	*/
 	public static int[][] mulitiplyMatrix(Matrix a, Matrix b) {
 		// If A is an n == m matrix and B is an m == p matrix
-		if(canMultiply(a, b)) {
-			// result will be a n x p matrix
-			int[][] result = new int[a.rows][b.columns];
-			// multiply each of matrix 1 by matrix 2
-			// for each in the first row, multiply by each in the second row
-			for(int i = 0; i < a.rows; i++) {
-				for(int j = 0; j < b.columns; j++) {
-					for(int k = 0; k < a.columns; k++)
-						result[i][j] += a.data[i][k] * b.data[k][j];
-				}
+		// result will be a n x p matrix
+		int[][] result = new int[a.rows][b.columns];
+		// multiply each of matrix 1 by matrix 2
+		for(int rows = 0; rows < a.rows; rows++) {
+			for(int column = 0; column < b.columns; column++) {
+				
 			}
-			return result;
-		} else {
-			return null;
-		}	
+		}
+		return result;
 	}
 
 	
