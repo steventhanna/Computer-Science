@@ -6,6 +6,8 @@
  * for values stored in an array
  */
 
+import java.util.Scanner;
+
 public class Program5 {
 
 	
@@ -58,7 +60,12 @@ public class Program5 {
 			test[i] = i;
 		}
 		// Should go from 0 - 9
-		System.out.println(isMedian(test, 4));
+		// System.out.println(isMedian(test, 4));
+		
+		Scanner scanner = new Scanner(System.in);
+		System.out.println("Enter the number to test the median");
+		System.out.println(isMedian(test, scanner.nextInt()));
+		scanner.close();
 		
 	}
 }
