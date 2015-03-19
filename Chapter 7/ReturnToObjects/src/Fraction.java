@@ -56,31 +56,14 @@ public class Fraction extends Exception {
 		return new Fraction(newNum, newDenom);
 	}
 	
-	public static Fraction add(Fraction a, Fraction b) {
-		int newNum = a.numerator * b.denominator + a.denominator * b.numerator;
-		int newDenom = a.denominator * b.denominator;
-		return new Fraction(newNum, newDenom);	
-	}
-	
 	public Fraction multiply(Fraction other) {
 		int newNum = numerator * other.numerator;
 		int newDenom = denominator * other.denominator;
 		return new Fraction(newNum, newDenom);
 	}
 	
-	public static Fraction multiply(Fraction a, Fraction b) {
-		int newNum = a.numerator * b.numerator;
-		int newDenom = a.denominator * b.denominator;
-		return new Fraction(newNum, newDenom);
-	}
-	
 	public Fraction multiply(int n) {
 		int newNum = numerator * n;
 		return new Fraction(newNum, denominator);
-	}
-	
-	public static Fraction multiply(Fraction a, int n) {
-		int newNum = a.numerator * n;
-		return new Fraction(newNum, a.denominator);
 	}
 }
