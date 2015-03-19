@@ -66,4 +66,9 @@ public class Fraction extends Exception {
 		int newNum = numerator * n;
 		return new Fraction(newNum, denominator);
 	}
+	
+	public Fraction reduce(Fraction other) {
+		
+		
+	}
 }
