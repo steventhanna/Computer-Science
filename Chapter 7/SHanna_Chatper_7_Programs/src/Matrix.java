@@ -36,12 +36,11 @@ public class Matrix {
 	/**
 	* Determines whether or not two Matrix objects can be successfully added or subtracted
 	* The number of rows of Matrix A and of Matrix B must ==.  Same for columns
-	* @param Matrix a - First matrix to determine eligibility
 	* @param Matrix b - Second matrix to determine eligibility
 	* @return boolean - true: can be added or subtracted, false: cannot be added or subtracted
 	*/
-	public static boolean canBeAddedOrSubtracted(Matrix a, Matrix b) {
-		if(a.rows == b.rows && a.columns == b.columns) {
+	public boolean canBeAddedOrSubtracted(Matrix b) {
+		if(rows == b.rows && columns == b.columns) {
 			return true;
 		} else {
 			return false;
@@ -51,12 +50,11 @@ public class Matrix {
 	/**
 	* Determines whether or not two Matrix Objects can be successfully multiplied
 	* The number of columns of Matrix a must == number of rows in Matrix b
-	* @param Matrix a - First matrix to determine eligibility
 	* @param Matrix b - Second matrix to determine eligibility
 	* @return boolean - true: can be multiplied, false: cannot be multiplied
 	*/
-	public static boolean canMultiply(Matrix a, Matrix b) {
-		if(a.columns == b.rows) {
+	public boolean canMultiply(Matrix b) {
+		if(columns == b.rows) {
 			return true;
 		} else {
 			return false;
@@ -65,20 +63,19 @@ public class Matrix {
 	
 	/**
 	* Adds two Matrix Objects together
-	* @param Matrix a - First matrix to add
 	* @param Matrix b - Second matrix to add
 	* @return int[][] - the added matrix in its new form
-	*/
-	public static int[][] addMatrix(Matrix a, Matrix b) {
-		int[][] result = new int[a.rows][a.columns];
-		if(canBeAddedOrSubtracted(a, b)) {
+	*/	
+	public Matrix addMatrix(Matrix b) {
+		int[][] result = new int[rows][columns];
+		if(canBeAddedOrSubtracted(b)) {
 			// Calculate new totals row by row
-			for(int i = 0; i < a.rows; i++) {
-				for(int j = 0; j < a.columns; j++) {
-					result[i][j] = a.data[i][j] + b.data[i][j];
+			for(int i = 0; i < rows; i++) {
+				for(int j = 0; j < columns; j++) {
+					result[i][j] = data[i][j] + b.data[i][j];
 				}
 			}
-			return result;
+			return new Matrix(result);
 		} else {
 			return null;
 		}
@@ -86,28 +83,15 @@ public class Matrix {
 
 	/**
 	* Subtracts two Matrix Objects together
-	* @param Matrix a - First matrix to subtracts
 	* @param Matrix b - Second matrix to subtracts
 	* @return int[][] - the added matrix in its new form
-	*/
-	public static int[][] subtractMatrix(Matrix a, Matrix b) {
-		int[][] result = new int[a.rows][a.columns];
-		if(canBeAddedOrSubtracted(a, b)) {
-			// Calculate new totals row by row
-			for(int i = 0; i < a.rows; i++) {
-				for(int j = 0; j < a.columns; j++) {
-					result[i][j] = a.data[i][j] - b.data[i][j];
-				}
-			}
-			return result;
-		} else {
-			return null;
-		}
+	*/	
+	public Matrix subtractMatrix(Matrix b) {
+		return null;
 	}
 	
 	/**
 	* Multiplies one Matrix Object by an integer scalar
-	* @param Matrix a - matrix to multiply by scalar
 	* @param int scalar - the scalar that will be doing the multiplying
 	* @return int[][] - the multiplied matrix in its new form
 	*/
@@ -128,9 +112,8 @@ public class Matrix {
 	* The resulting matrix will be a n x p matrix
 	* Method of Multiplication: Dot product - multiply each value in first matrix, by 
 	* every value in second matrix.  Add values together.
-	* @param Matrix a - First matrix to multiply
 	* @param Matrix b - Second matrix to multiply
-	* @return int[][] - the multiplied matrix in its new form
+	* @return Matrix - the multiplied matrix in its new form
 	*/
 	public static int[][] mulitiplyMatrix(Matrix a, Matrix b) {
 		// If A is an n == m matrix and B is an m == p matrix
