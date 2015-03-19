@@ -37,10 +37,6 @@ public class Fraction extends Exception {
 		return (double)numerator / denominator;
 	}
 	
-	public void reduce() {
-		
-	}
-	
 	public int gcd(int a, int b) {
 		while(b > 0) {
 			int temp = b;
@@ -67,8 +63,11 @@ public class Fraction extends Exception {
 		return new Fraction(newNum, denominator);
 	}
 	
-	public Fraction reduce(Fraction other) {
-		
-		
+	// helper method
+	private void reduce() {
+		if(numerator == 0) {
+			denominator = 1;
+			return;
+		}
 	}
 }
