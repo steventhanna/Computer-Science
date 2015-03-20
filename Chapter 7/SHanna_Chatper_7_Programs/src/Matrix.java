@@ -115,20 +115,27 @@ public class Matrix {
 	* @param Matrix b - Second matrix to multiply
 	* @return Matrix - the multiplied matrix in its new form
 	*/
-	public static int[][] mulitiplyMatrix(Matrix a, Matrix b) {
-		// If A is an n == m matrix and B is an m == p matrix
-		// result will be a n x p matrix
-		int[][] result = new int[a.rows][b.columns];
-		// multiply each of matrix 1 by matrix 2
-		for(int rows = 0; rows < a.rows; rows++) {
-			for(int column = 0; column < b.columns; column++) {
-				
+	public int[][] mulitiplyMatrix(Matrix b) {
+		if(this.canMultiply(b)) {
+			// If A is an n == m matrix and B is an m == p matrix
+			// result will be a n x p matrix
+			int[][] result = new int[this.rows][b.columns];
+			// multiply each of matrix 1 by matrix 2
+			for(int i = 0; i < rows; i++) {
+				for(int j = 0; j < b.columns; j++) {
+					for(int k = 0; k < columns; k++) {
+						result[i][j] = result[i][j] + this.data[i][k] * b.data[k][j];
+					}
+				}
 			}
+			return result;
+		} else {
+			int[][] done = new int[1][1];
+			return done;
 		}
-		return result;
+		
 	}
 
-	
 	/**
 	* Prints out the Matrix object
 	*/

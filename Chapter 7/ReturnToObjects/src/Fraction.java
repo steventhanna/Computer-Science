@@ -1,4 +1,3 @@
-
 public class Fraction extends Exception {
 	
 	
@@ -8,7 +7,7 @@ public class Fraction extends Exception {
 	private int denominator;
 	
 	// Constructor
-	// Initalize fields for a specific instance 
+	// Initialize fields for a specific instance 
 	public Fraction(int num, int denom) {
 		if(denom == 0) {
 			throw new IllegalArgumentException("Denominator cannot == 0");
@@ -25,6 +24,7 @@ public class Fraction extends Exception {
 		denominator = other.denominator;
 	}
 	
+	// Getters
 	public int getNumerator() {
 		return numerator;
 	}
@@ -32,16 +32,33 @@ public class Fraction extends Exception {
 	public int getDenominator() {
 		return denominator;
 	}
+
+	// Setters
+	public void setNumerator(int n) {
+		numerator = n;
+	}
+
+	public void setDenominator(int d) {
+		if(d != 0) {
+			denom = d;
+			reduce();
+		} else {
+			throw new IllegalArgumentException("Fraction construction error: denominator == 0");
+		}
+		denominator = d;
+	}
 	
 	public double fracToDecimal() {
 		return (double)numerator / denominator;
 	}
 	
 	public int gcd(int a, int b) {
-		while(b > 0) {
-			int temp = b;
-			b = a % b;
-			a = temp;
+		while(a != b) {
+			if(a > b) {
+				a -= b;
+			} else {
+				b -= a;
+			}
 		}
 		return a;
 	}
@@ -64,10 +81,25 @@ public class Fraction extends Exception {
 	}
 	
 	// helper method
+	// Private in this case, means that only Fraction objects can access this method
 	private void reduce() {
 		if(numerator == 0) {
 			denominator = 1;
 			return;
 		}
+		if(denominator < 0) {
+			numerator = -numerator;
+			denominator = -denominator;
+			
+		}
+
+		int divisor = gcd(Math.abs(numerator), denominator);
+		numerator /= divisor;
+		denominator /= divisor;
+	}
+	
+	// Very handy here.
+	public String toString() {
+		return numerator + "/" + denominator;
 	}
 }
