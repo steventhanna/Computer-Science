@@ -1,5 +1,3 @@
-import java.util.Scanner;
-
 /**
  * @author steventhanna
  * @class Program2
@@ -7,6 +5,7 @@ import java.util.Scanner;
  * @description Write a method that finds the three largest elements 
  * in an array of doubles using the following header:
  */
+import java.util.Scanner;
 public class Program2 {
 	
 	public static double[] min(double[] array) {
