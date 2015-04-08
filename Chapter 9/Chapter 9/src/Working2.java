@@ -18,6 +18,11 @@ public class Working2 {
 		}
 	}
 	
+	public static int convertToDecFromHex(STring hex) {
+		int decimalValue = 0;
+		for(int i = 0; i < )
+	}
+	
 	public static void main(String[] args) {
 		
 		Scanner scanner = new Scanner(System.in);
