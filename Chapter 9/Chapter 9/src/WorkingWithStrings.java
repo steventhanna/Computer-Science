@@ -6,11 +6,11 @@ public class WorkingWithStrings {
 		// Objects cannot be changed
 		
 		// Literal strings
-		String s1 = "Hello world";
-		s1 = "Hello world again";
+//		String s1 = "Hello world";
+//		s1 = "Hello world again";
 
 		// String constructor
-		String s2 = new String("Constructer String");
+//		String s2 = new String("Constructer String");
 		String s3 = "Literal String";
 		// System.out.println(s4 == s3);
 
@@ -27,6 +27,11 @@ public class WorkingWithStrings {
 
 		String otherString = " not ";
 		System.out.println(myString.substring(0, 9) + otherString + myString.substring(9));
+		
+		String s1 = "abcdf";
+		String s2 = "abf";
+		int x = s1.compareTo(s2);
+		System.out.println(x);
 
 	}
 
