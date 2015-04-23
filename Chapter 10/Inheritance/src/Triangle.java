@@ -51,7 +51,13 @@ public class Triangle {
 				* (semiP - side3)); 
 	}
 	
+	public void printType() {
+		System.out.println(type);
+	}
 	
+	public void doThis() {
+		System.out.println("BOOM! This is stupid");
+	}
 	
 	public static boolean isTriangle(int side1, int side2, int side3)
 	{

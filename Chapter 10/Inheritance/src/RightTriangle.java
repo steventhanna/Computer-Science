@@ -23,4 +23,15 @@ public class RightTriangle extends Triangle {
 		}
 		
 	}
+	
+	@Override
+	public void printType() {
+		System.out.println(type);
+	}
+	
+	
+	public void doThat() {
+		System.out.println("BRROM BROOM! This is stupid");
+	}
+	
 }
