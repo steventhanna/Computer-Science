@@ -1,9 +1,15 @@
+/**
+* @author Steven T Hanna
+* @date 5/4/15
+* @class Fan - object description of Fan
+*/
+
 public class Fan {
 
 	// Static constants
-	private final int FAST = 3;
-	private final int MEDIUM = 2;	
-	private final int SLOW = 1;
+	public static final int FAST = 3;
+	public static final int MEDIUM = 2;	
+	public static final int SLOW = 1;
 
 	/**
 	* Designates fan speed.
@@ -61,7 +67,7 @@ public class Fan {
 	/**
 	* @param boolean io to set io
 	*/
-	public void setio(boolean i) {
+	public void setIO(boolean i) {
 		io = i;
 	}
 
@@ -101,9 +107,9 @@ public class Fan {
 	public String toString() {
 		// 	if on
 		if(io) {
-			return "Fan speed: " + speed + " color: " + color + " radius: " + radius;
+			return "Fan speed: " + speed + ", color: " + color + ", radius: " + radius;
 		} else {
-			return "Color: " + color + " radius: " + radius + " fan is off";
+			return "Color: " + color + ", radius: " + radius + ", fan is off";
 		}
 	}
 }
