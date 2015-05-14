@@ -17,17 +17,19 @@ public class BinaryThing extends JFrame {
 	
 	public void buildWindow() {
 		JFrame frame = new JFrame("Binary");
-		frame.setSize(700, 700);
+		frame.setSize(400, 400);
 		frame.setLocationRelativeTo(null);
+		
 		frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 		
 		GridLayout layout = new GridLayout(10,10);
 		frame.setLayout(layout);
 		for(int i = 0; i < 100; i++) {
-			frame.add(new JLabel(generateNumber()));	
+			JLabel label = new JLabel(generateNumber());
+			label.setBorder(BorderFactory.createEmptyBorder(0, 20, 0, 0));
+			frame.add(label);	
 		}
 		
-		frame.pack();
 		frame.setVisible(true);
 		
 
